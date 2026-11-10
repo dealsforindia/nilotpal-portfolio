@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nilotpal Saha — Résumé · N!S Graphics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F1E6; --ink:#14110D; --gold:#C08A2E; --verm:#B03A2E;
+  --rule:#CFC6B0; --muted:#6B6355; --grain:rgba(20,17,13,.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Archivo",system-ui,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;cursor:default}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.6' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.14'/%3E%3C/svg%3E")}
+img{display:block;width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.disp{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;letter-spacing:-.02em}
+
+/* ---------- registration cross that follows the cursor ---------- */
+.reg{position:fixed;top:0;left:0;width:34px;height:34px;pointer-events:none;z-index:20;
+     mix-blend-mode:multiply;transform:translate(-50%,-50%);transition:opacity .3s}
+.reg::before,.reg::after{content:"";position:absolute;background:var(--ink);opacity:.34}
+.reg::before{left:50%;top:0;width:1px;height:100%}
+.reg::after{top:50%;left:0;height:1px;width:100%}
+.reg .ring{position:absolute;inset:0;border:1px solid var(--ink);opacity:.3;border-radius:50%;
+           transform:scale(1);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.reg.hover .ring{transform:scale(1.55);opacity:.6}
+.reg.hover::before,.reg.hover::after{opacity:.55}
+
+/* ---------- press control bar ---------- */
+.press{position:fixed;bottom:0;left:0;right:0;background:var(--ink);color:var(--paper);z-index:30;
+  display:flex;align-items:center;justify-content:space-between;height:34px;padding:0 22px;
+  font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+.press .grp{display:flex;align-items:center;gap:22px}
+.press .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2.4s infinite}
+.press .stat{display:inline-flex;align-items:center;gap:9px;color:rgba(246,241,230,.62)}
+.platebars{display:flex;gap:16px}
+.pb{display:inline-flex;align-items:center;gap:7px;color:rgba(246,241,230,.62)}
+.pb .bar{width:52px;height:3px;background:rgba(246,241,230,.14);position:relative;overflow:hidden}
+.pb .bar::after{content:"";position:absolute;left:0;top:0;bottom:0;background:var(--paper);width:var(--v,0%);}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.32}}
+#clock{color:var(--paper)}
+
+/* ---------- sheets ---------- */
+.wrap{max-width:1240px;margin:0 auto;padding:56px 40px 110px}
+.sheet{background:#FCF8EE;border:1px solid var(--ink);position:relative;margin-bottom:52px;
+  padding:64px 62px 46px;box-shadow:0 1px 0 var(--ink), 3px 3px 0 rgba(20,17,13,.05)}
+.sheet::before,.sheet::after{content:"";position:absolute;width:11px;height:11px;pointer-events:none}
+.sheet::before{top:11px;left:11px;border-left:1px solid var(--muted);border-top:1px solid var(--muted)}
+.sheet::after{bottom:11px;right:11px;border-right:1px solid var(--muted);border-bottom:1px solid var(--muted)}
+.crop{position:absolute;width:9px;height:9px;pointer-events:none}
+.crop.tr{top:-9px;right:-9px}.crop.tr::before{content:"";position:absolute;right:-1px;top:-1px;border-right:1px solid var(--ink);border-top:1px solid var(--ink)}
+.crop.br{bottom:-9px;left:-9px}.crop.br::before{content:"";position:absolute;left:-1px;bottom:-1px;border-left:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.slug{position:absolute;bottom:15px;left:62px;display:flex;gap:20px;font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.2em;color:#A79C88;text-transform:uppercase}
+.slug b{font-weight:500;color:var(--ink)}
+
+/* self-print choreography */
+.ink{opacity:0;transform:translateY(7px);filter:border(0)}
+.sheet.printed .ink{animation:reveal .62s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:var(--d,0ms)}
+@keyframes reveal{to{opacity:1;transform:none;filter:none}}
+.printall .sheet .ink,.printall .sheet .pull>*{opacity:1 !important;transform:none !important;filter:none !important;animation:none !important}
+.printall .plate img,.printall .plate{animation:none !important;filter:none !important}
+.printall .rule{transform:none !important;animation:none !important}
+.rule{height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left}
+.sheet.printed .rule{animation:draw .8s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:var(--d,0ms)}
+@keyframes draw{to{transform:scaleX(1)}}
+.plate{filter:saturate(0) contrast(1.3) brightness(1.08) opacity(0)}
+.sheet.printed .plate img{animation:develop .95s ease forwards;animation-delay:var(--d,0ms)}
+.plate img{filter:saturate(0) contrast(1.35) brightness(1.06)}
+@keyframes develop{to{filter:saturate(1) contrast(1) brightness(1)}}
+.pull{overflow:hidden}
+.pull>*{transform:translateY(102%)}
+.sheet.printed .pull>*{animation:pull .7s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:var(--d,0ms)}
+@keyframes pull{to{transform:none}}
+
+/* ---------- type ---------- */
+h1{font-size:136px;line-height:.92;margin-top:26px}
+h1 em{font-style:italic;color:var(--verm)}
+.role{font-size:17px;color:#3B362C;max-width:620px;margin-top:22px}
+.row{display:grid;grid-template-columns:1fr 320px;gap:64px;align-items:start}
+h2{font-size:44px;margin-top:12px}
+.margin-lbl{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#A79C88}
+blockquote{font-family:"Bodoni Moda",serif;font-style:italic;font-size:23px;line-height:1.42;margin-top:16px;color:#3B362C}
+.facts{margin-top:34px;display:grid;gap:11px}
+.facts .f{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--rule);padding-bottom:9px}
+.facts .f span:first-child{font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:#A79C88}
+.facts .f span:last-child{font-size:13.5px;font-weight:500}
+
+/* ---------- experience ---------- */
+.xp{margin-top:28px}
+.job{display:grid;grid-template-columns:110px 1fr 128px;gap:28px;padding:22px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.job:last-child{border-bottom:0}
+.job .yr{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.14em;color:var(--muted)}
+.job .t{font-family:"Bodoni Moda",serif;font-size:25px;letter-spacing:-.01em}
+.job .co{font-size:11.5px;color:var(--muted);letter-spacing:.03em;margin-top:4px}
+.job .li{font-size:13.5px;color:#3B362C;margin-top:9px;max-width:560px}
+.job .co b{font-weight:500;color:var(--ink)}
+
+/* ---------- tools ---------- */
+.tools{display:grid;grid-template-columns:1fr 1fr;gap:0 52px;margin-top:22px}
+.tools .t{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.tools .t span:first-child{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase}
+.tools .t span:last-child{font-size:11.5px;color:var(--muted);text-align:right}
+.edu{margin-top:36px;display:grid;gap:10px}
+.edu .e{display:flex;gap:16px;align-items:baseline;border-bottom:1px solid var(--rule);padding-bottom:9px}
+.edu .e .yr{font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:#A79C88;min-width:96px}
+.edu .e .q{font-size:14px;font-weight:500}
+.edu .e .ins{font-size:12px;color:var(--muted)}
+
+/* ---------- work grid ---------- */
+.wall{display:grid;grid-template-columns:repeat(12,1fr);gap:34px 24px;align-items:start;margin-top:30px}
+.wall figure{position:relative}
+figcaption{display:flex;justify-content:space-between;font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.c4{grid-column:span 4}.c3{grid-column:span 3}.c5{grid-column:span 5}.c7{grid-column:span 7}.c6{grid-column:span 6}
+.wall .plate{position:relative}
+.wall .plate::after{content:"";position:absolute;inset:0;background:var(--ink);opacity:0;transition:opacity .25s}
+.wall .plate:hover::after{opacity:.05}
+
+/* ---------- contact ---------- */
+.contact{background:var(--gold);color:var(--ink);margin-top:52px}
+.contact .wrap{padding:66px 40px 60px}
+.contact h2{font-size:64px;max-width:720px;margin:16px 0 38px;line-height:1}
+.cline{display:flex;gap:52px;flex-wrap:wrap;border-top:1px solid rgba(20,17,13,.28);padding-top:26px}
+.cline div span{display:block;font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(20,17,13,.55);margin-bottom:5px}
+.cline div strong{font-weight:500;font-size:15.5px;letter-spacing:-.01em;cursor:pointer}
+.cline div strong:hover{opacity:.72}
+.dl{display:inline-block;margin-top:26px;border:1px solid var(--ink);padding:11px 18px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.dl:hover{background:var(--ink);color:var(--gold)}
+
+footer .wrap{display:flex;justify-content:space-between;padding:24px 40px 46px;font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:900px){
+  .row{grid-template-columns:1fr}
+  .sheet{padding:44px 26px 40px}
+  h1{font-size:62px} h2{font-size:30px}
+  .contact h2{font-size:36px}
+  .wall figcaption{font-size:7.5px}
+}
+</style>
+</head>
+<body>
+
+<div class="reg" id="reg"><div class="ring"></div></div>
+
+<div class="press">
+  <div class="grp">
+    <span class="dot"></span>
+    <span class="stat">Press N!S-01 · Running</span>
+    <span class="stat" id="prog">Sheet 1 / 4</span>
+  </div>
+  <div class="grp platebars">
+    <span class="pb">Cyan<div class="bar" id="pb1"></div></span>
+    <span class="pb">Magenta<div class="bar" id="pb2"></div></span>
+    <span class="pb">Yellow<div class="bar" id="pb3"></div></span>
+    <span class="pb">Black<div class="bar" id="pb4"></div></span>
+  </div>
+  <div class="grp">
+    <span class="stat">Kolkata <span id="clock">—</span></span>
+    <span class="stat">IST</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ================= SHEET 1 ================= -->
+  <section class="sheet" data-sheet="1">
+    <span class="crop tr"></span><span class="crop br"></span>
+    <div class="mono ink" style="--d:80ms">N!S Graphics · Interactive résumé · Est. 2019</div>
+    <div class="rule" style="--d:120ms;margin-top:16px"></div>
+    <div class="row" style="margin-top:44px">
+      <div>
+        <div class="pull" style="--d:220ms"><h1 class="disp">Nilotpal<br><em>Saha</em></h1></div>
+        <div class="ink" style="--d:340ms">
+          <p class="role">Senior Graphic Designer &amp; Video Editor. Six years of commercial
+          design — travel, healthcare, education, retail. Posters, print, social and video,
+          from brief to press file.</p>
+        </div>
+        <div class="ink" style="--d:460ms"><blockquote>“Every date has a design.”</blockquote></div>
+      </div>
+      <div class="plate" style="--d:520ms">
+        <img src="assets/nilotpal_portrait.jpg" alt="Nilotpal Saha">
+        <figcaption style="margin-top:9px"><span>The desk</span><span>837×978</span></figcaption>
+      </div>
+    </div>
+    <div class="facts ink" style="--d:620ms">
+      <div class="f"><span>Studio</span><span>NIS Graphics — Subhasgram, Pragati Pally, Kolkata 700147</span></div>
+      <div class="f"><span>Phone</span><span>+91 70039 96685</span></div>
+      <div class="f"><span>Email</span><span>sahanilotpal005@gmail.com</span></div>
+      <div class="f"><span>Born</span><span>29 January 1999 · Kolkata, West Bengal</span></div>
+    </div>
+    <div class="slug ink" style="--d:740ms"><span>N!S Graphics</span><b>Sheet 1 / 4</b><span>Identity</span></div>
+  </section>
+
+  <!-- ================= SHEET 2 ================= -->
+  <section class="sheet" data-sheet="2">
+    <span class="crop tr"></span><span class="crop br"></span>
+    <div class="mono ink" style="--d:60ms">Experience — Work history</div>
+    <div class="rule" style="--d:120ms;margin-top:16px"></div>
+    <div class="ink" style="--d:220ms"><h2 class="disp" style="margin-bottom:8px">Six years, five desks.</h2></div>
+    <div class="xp ink" style="--d:340ms">
+
+      <div class="job"><div class="yr">2026 —</div>
+        <div><div class="t">Senior Graphic Designer</div><div class="co"><b>Image Clinic</b> · Kolkata, West Bengal</div>
+          <p class="li">Works directly with the CEO on brand strategy. Leads the design team across multi-channel
+          campaigns, digital assets and high-ticket collaterals.</p></div>
+        <div class="yr">Present</div>
+      </div>
+
+      <div class="job"><div class="yr">2023—26</div>
+        <div><div class="t">Senior Graphic Designer</div><div class="co"><b>Pixel Solutionz Technology</b> · Kolkata, West Bengal</div>
+          <p class="li">Handled all creative executions, translating client briefs into high-impact visuals.
+          Led the design team and ran end-to-end commercial video pipelines on tight turnarounds.</p></div>
+        <div class="yr">3 yrs</div>
+      </div>
+
+      <div class="job"><div class="yr">2022—23</div>
+        <div><div class="t">Mid Graphic Designer</div><div class="co"><b>Hykez Technology India Pvt. Ltd.</b> · Kolkata, West Bengal</div>
+          <p class="li">Visual content for online and offline platforms — websites, print ads, logos, and video.
+          Applied advanced colour theory, brand standards, typography and graphic elements.</p></div>
+        <div class="yr">1 yr</div>
+      </div>
+
+      <div class="job"><div class="yr">2020—22</div>
+        <div><div class="t">Junior Graphic Designer</div><div class="co"><b>Arena Animation</b> · Kolkata, West Bengal</div>
+          <p class="li">Designed advertisement creatives, print collateral and email banners.
+          Worked strictly within corporate brand guidelines across web and social channels.</p></div>
+        <div class="yr">2 yrs</div>
+      </div>
+
+      <div class="job"><div class="yr">2019—20</div>
+        <div><div class="t">Freelance Graphic Design</div><div class="co"><b>Yogines Studioo</b> · Kolkata, West Bengal</div>
+          <p class="li">Partnered with marketing and creative teams on trend-driven social media posts.
+          <b style="font-weight:500">37% increase in web traffic</b> through high-engagement creative strategy.</p></div>
+        <div class="yr">1 yr</div>
+      </div>
+
+    </div>
+    <div class="slug ink" style="--d:860ms"><span>N!S Graphics</span><b>Sheet 2 / 4</b><span>Experience</span></div>
+  </section>
+
+  <!-- ================= SHEET 3 ================= -->
+  <section class="sheet" data-sheet="3">
+    <span class="crop tr"></span><span class="crop br"></span>
+    <div class="row">
+      <div>
+        <div class="mono ink" style="--d:60ms">Software &amp; education</div>
+        <div class="rule" style="--d:120ms;margin-top:16px"></div>
+        <div class="ink" style="--d:240ms"><h2 class="disp">The desk.</h2></div>
+        <div class="tools ink" style="--d:400ms">
+          <div class="t"><span>Photoshop</span><span>6 years</span></div>
+          <div class="t"><span>Premiere Pro</span><span>Commercial edits</span></div>
+          <div class="t"><span>Illustrator</span><span>6 years</span></div>
+          <div class="t"><span>After Effects</span><span>Motion &amp; titles</span></div>
+          <div class="t"><span>CorelDRAW</span><span>Print &amp; press files</span></div>
+          <div class="t"><span>Animate CC</span><span>Frame animation</span></div>
+          <div class="t"><span>Autodesk Maya</span><span>Diploma, 3D</span></div>
+          <div class="t"><span>Figma</span><span>Screen layouts</span></div>
+          <div class="t"><span>Canva</span><span>Fast drafts</span></div>
+        </div>
+        <div class="edu ink" style="--d:560ms">
+          <div class="e"><span class="yr">2019–2021</span><span><span class="q">Diploma in 3D Animation</span> <span class="ins">— Arena Animation, Kolkata</span></span></div>
+          <div class="e"><span class="yr">2018–2020</span><span><span class="q">Graduation (Undergraduate)</span> <span class="ins">— Calcutta University</span></span></div>
+        </div>
+      </div>
+      <div>
+        <div class="mono ink" style="--d:680ms">Education</div>
+        <div class="rule" style="--d:720ms;margin-top:16px"></div>
+        <div class="plate" style="--d:820ms;margin-top:34px">
+          <img src="assets/eventposter.jpg" alt="A.G.C. Bose College Music Fest poster">
+        </div>
+      </div>
+    </div>
+    <div class="slug ink" style="--d:940ms"><span>N!S Graphics</span><b>Sheet 3 / 4</b><span>Tools &amp; education</span></div>
+  </section>
+
+  <!-- ================= SHEET 4 ================= -->
+  <section class="sheet" data-sheet="4">
+    <span class="crop tr"></span><span class="crop br"></span>
+    <div class="mono ink" style="--d:60ms">Selected work — six of fifty</div>
+    <div class="rule" style="--d:120ms;margin-top:16px"></div>
+    <div class="ink" style="--d:240ms"><h2 class="disp" style="margin-bottom:8px">The wall.</h2></div>
+
+    <div class="wall">
+      <figure class="c7" style="--d:380ms"><div class="plate"><img src="assets/durga1.jpg" alt="Image Clinic Durga Puja"></div>
+        <figcaption><span>Image Clinic — Durga Puja</span><span>2026 · 1400×560</span></figcaption></figure>
+      <figure class="c5" style="--d:460ms"><div class="plate"><img src="assets/photomanip.jpg" alt="Photo composite"></div>
+        <figcaption><span>Photo composite</span><span>720×1072</span></figcaption></figure>
+
+      <figure class="c3" style="--d:540ms"><div class="plate"><img src="assets/gill204.jpg" alt="Gill Travels"></div>
+        <figcaption><span>Gill Travels · Nº204</span><span>1000×1276</span></figcaption></figure>
+      <figure class="c3" style="--d:620ms"><div class="plate"><img src="assets/etutor.jpg" alt="EtuTor Home"></div>
+        <figcaption><span>The EtuTor Home</span><span>1080×1080</span></figcaption></figure>
+      <figure class="c3" style="--d:700ms"><div class="plate"><img src="assets/eventposter.jpg" alt="Music Fest"></div>
+        <figcaption><span>A.G.C. Bose — Music Fest</span><span>1400×1812</span></figcaption></figure>
+      <figure class="c3" style="--d:780ms"><div class="plate"><img src="assets/animals.jpg" alt="Geometric tiger"></div>
+        <figcaption><span>Vector study</span><span>1136×936</span></figcaption></figure>
+    </div>
+    <div class="slug ink" style="--d:900ms"><span>N!S Graphics</span><b>Sheet 4 / 4</b><span>Selected work</span></div>
+  </section>
+
+</div>
+
+<section class="contact">
+  <div class="wrap">
+    <div class="mono ink" style="--d:80ms">Start a calendar · Open for commissions</div>
+    <h2 class="disp">Send the brief.<br>We’ll hit the date.</h2>
+    <div class="cline">
+      <div><span>Call</span><strong onclick="location.href='tel:+917003996685'">+91 70039 96685</strong></div>
+      <div><span>WhatsApp</span><strong onclick="location.href='https://wa.me/917003996685'">+91 70039 96685</strong></div>
+      <div><span>Email</span><strong onclick="location.href='mailto:sahanilotpal005@gmail.com'">sahanilotpal005@gmail.com</strong></div>
+      <div><span>Studio</span><strong>Subhasgram, Kolkata 700147</strong></div>
+    </div>
+    <a class="dl" href="../nilotpal-saha-portfolio/assets/nilotpal_resume.pdf" download>Download CV (PDF)</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>N!S Graphics — Kolkata</span>
+    <span>Every date has a design</span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+<script>
+const reg = document.getElementById('reg');
+const isTouch = matchMedia('(pointer:coarse)').matches;
+const printAll = new URLSearchParams(location.search).has('printall');
+if(printAll){ document.documentElement.classList.add('printall'); document.querySelectorAll('.sheet').forEach(s=>s.classList.add('printed')); }
+if(!isTouch){
+  let rx=0, ry=0, cx=0, cy=0, t;
+  addEventListener('mousemove', e=>{
+    rx=e.clientX; ry=e.clientY;
+    reg.style.setProperty('transform',`translate(${rx-17}px,${ry-17}px)`);
+    const el=document.elementFromPoint(rx,ry);
+    reg.classList.toggle('hover', !!(el && el.closest('a,button,strong,.plate,.crow')));
+  });
+}
+
+/* stagger delays inside every sheet, once */
+document.querySelectorAll('.sheet').forEach(sh=>{
+  const els=[...sh.querySelectorAll('.ink, .rule, .plate, .pull')];
+  const base=[80,180,300,420,540,660,780,860,920];
+  els.forEach((el,i)=>{
+    if(!el.style.getPropertyValue('--d')) el.style.setProperty('--d', base[Math.min(i,base.length-1)]+'ms');
+  });
+});
+
+/* print sheets as they enter + live press telemetry */
+const sheets=[...document.querySelectorAll('[data-sheet]')];
+const prog=document.getElementById('prog');
+const b=[document.getElementById('pb1'),document.getElementById('pb2'),document.getElementById('pb3'),document.getElementById('pb4')];
+function update(){
+  const p=window.scrollY/(document.documentElement.scrollHeight-window.innerHeight||1);
+  b[0].style.setProperty('--v',(100-(p*62)).toFixed(1)+'%');
+  b[1].style.setProperty('--v',(100-(p*52)).toFixed(1)+'%');
+  b[2].style.setProperty('--v',(100-(p*31)).toFixed(1)+'%');
+  b[3].style.setProperty('--v',(100-(p*84)).toFixed(1)+'%');
+  let cs=0;
+  sheets.forEach(s=>{ const r=s.getBoundingClientRect();
+    if(r.top<window.innerHeight*0.88 && r.bottom>0) cs=Math.max(cs, +s.dataset.sheet);
+  });
+  prog.textContent=`Sheet ${Math.max(1,cs)} / ${sheets.length}`;
+}
+addEventListener('scroll',update,{passive:true}); addEventListener('resize',update); update();
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('printed'); io.unobserve(e.target);} }),{threshold:.06,rootMargin:'0px 0px -8% 0px'});
+sheets.forEach(s=>io.observe(s));
+
+function clock(){
+  const t=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(new Date());
+  document.getElementById('clock').textContent=t;
+}
+clock(); setInterval(clock,1000);
+</script>
+</body>
+</html>

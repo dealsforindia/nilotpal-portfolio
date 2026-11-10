@@ -1,0 +1,2126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nilotpal Saha — N!S Graphics · Graphic Designer, Kolkata</title>
+<meta name="description" content="Selected work by Nilotpal Saha — senior graphic designer in Kolkata. Campaign posters, identities, social and print for Gill Travels, Image Clinic, DesignLogo, The EtuTor Home and A.G.C. Bose College.">
+<meta property="og:title" content="Nilotpal Saha — N!S Graphics">
+<meta property="og:description" content="Senior graphic designer in Kolkata. Posters, identities, campaigns and print.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/opt/gill210.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="assets/nis-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ============================================================
+   N!S GRAPHICS — THE PRINT ROOM
+   Work-first portfolio for Nilotpal Saha, Kolkata
+   ============================================================ */
+@font-face{
+  font-family:"Didot Pro";src:url("assets/fonts/DidotLTPro-Roman.woff2") format("woff2");
+  font-weight:400;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:"Didot Pro";src:url("assets/fonts/DidotLTPro-Bold.woff2") format("woff2");
+  font-weight:700;font-style:normal;font-display:swap;
+}
+:root{
+  --paper:#F6F1E6;
+  --paper-2:#EFE7D6;
+  --ink:#14110D;
+  --muted:#635A4B;
+  --rule:#D9CFBB;
+  --cyan:#79D3DB;
+  --teal:#35B5BE;
+  --green:#4CC2A2;
+  --orange:#F2581A;
+  --red:#ED1B24;
+  --magenta:#ED096B;
+  --purple:#851C81;
+  --gold:#C08A2E;
+  --max:1440px;
+  --pad:clamp(24px,4.2vw,64px);
+  --ease:cubic-bezier(.2,.75,.25,1);
+  --display:"Didot Pro","Fraunces",Georgia,"Times New Roman",serif;
+  --dw:400;
+  --text:"Instrument Sans",system-ui,sans-serif;
+  --mono:"JetBrains Mono","IBM Plex Mono",monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--text);font-size:17px;line-height:1.64;
+  font-kerning:normal;font-feature-settings:"kern" 1,"liga" 1;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none;text-underline-offset:.18em}
+button{font:inherit;color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
+figure{margin:0}
+p{text-wrap:pretty}
+h1,h2,h3{text-wrap:balance;font-optical-sizing:auto}
+::selection{background:var(--gold);color:var(--ink)}
+.mono{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase}
+html.intro-lock,html.intro-lock body{overflow:hidden}
+
+/* ---------- grain + progress + cursor ---------- */
+.grain{
+  position:fixed;inset:0;z-index:9990;pointer-events:none;opacity:.55;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.86' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='table' tableValues='0 .055'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:180px 180px;
+}
+#progress{
+  position:fixed;top:0;left:0;right:0;height:3px;z-index:60;transform:scaleX(0);transform-origin:0 50%;
+  background:linear-gradient(90deg,var(--cyan),var(--teal),var(--green),var(--orange),var(--red),var(--magenta),var(--purple));
+}
+#spotlight{
+  position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0;
+  background:
+    radial-gradient(620px circle at var(--sx,50%) var(--sy,24%),rgba(242,88,26,.1),transparent 66%),
+    radial-gradient(980px circle at calc(var(--sx,50%) + 90px) calc(var(--sy,24%) + 70px),rgba(53,181,190,.055),transparent 72%);
+  transition:opacity .9s var(--ease);
+}
+#spotlight.on{opacity:1}
+main{position:relative;z-index:1}
+.contact{position:relative;z-index:1}
+/* ---------- intro ---------- */
+#intro{
+  position:fixed;inset:0;z-index:100;background:var(--paper);
+  display:grid;place-items:center;
+}
+.intro-inner{text-align:center;transform:translateY(-2vh)}
+.intro-logo{width:min(360px,42vw);height:auto;overflow:visible;color:#14110D}
+.intro-logo .blk{opacity:0;transform-box:fill-box;transform-origin:center}
+.intro-logo .ltr{opacity:0}
+.intro-logo .gl{opacity:0}
+.intro-meta{
+  display:flex;justify-content:space-between;gap:40px;width:min(360px,42vw);margin:26px auto 0;
+  padding-top:12px;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+  opacity:0;
+}
+.intro-bar{display:flex;width:min(360px,42vw);height:3px;margin:14px auto 0}
+.intro-bar i{flex:1;background:var(--c);transform:scaleX(0);transform-origin:left}
+.intro-skip{
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
+  border:0;background:none;font-family:var(--mono);font-size:9px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--muted);cursor:pointer;padding:8px 14px;
+}
+.intro-skip:hover{color:var(--ink)}
+
+/* ---------- header ---------- */
+#topbar{
+  position:fixed;top:0;left:0;right:0;z-index:70;height:76px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:0 var(--pad);border-bottom:1px solid transparent;
+  transition:background .3s,border-color .3s,backdrop-filter .3s,color .3s;
+}
+#topbar.scrolled{background:rgba(246,241,230,.88);backdrop-filter:blur(14px);border-bottom-color:var(--rule)}
+#topbar.on-dark.scrolled{background:rgba(20,17,13,.82);border-bottom-color:rgba(246,241,230,.14)}
+#topbar.on-dark .brand-txt b{color:var(--paper)}
+#topbar.on-dark .brand-txt i{color:rgba(246,241,230,.55)}
+#topbar.on-dark .nav a{color:rgba(246,241,230,.55)}
+#topbar.on-dark .nav a:hover,#topbar.on-dark .nav a.on{color:var(--paper)}
+#topbar.on-dark .nav a::after{background:var(--paper)}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand img{width:30px;height:auto;flex:none}
+.brand-txt{display:flex;flex-direction:column;line-height:1.05;min-width:0}
+.brand-txt b{font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:.005em;white-space:nowrap}
+.brand-txt i{font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;font-style:normal;color:var(--muted);text-transform:uppercase;white-space:nowrap}
+.nav{display:flex;gap:32px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.nav a{position:relative;padding:6px 0;color:var(--muted);transition:color .25s}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:right;transition:transform .3s var(--ease)}
+.nav a:hover,.nav a.on{color:var(--ink)}
+.nav a:hover::after,.nav a.on::after{transform:scaleX(1);transform-origin:left}
+.roll{display:block;position:relative;overflow:hidden;height:1.25em;line-height:1.25em}
+.roll>span{display:block;transition:transform .34s var(--ease)}
+.roll>span+span{position:absolute;inset:0;transform:translateY(115%)}
+.nav a:hover .roll>span:first-child{transform:translateY(-115%)}
+.nav a:hover .roll>span+span{transform:translateY(0)}
+/* ---------- hero ---------- */
+.hero{
+  max-width:var(--max);margin:0 auto;padding:calc(76px + 46px) var(--pad) 64px;
+  display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:34px;align-items:center;
+  min-height:100vh;
+}
+html.js .hero-el{opacity:0;transform:translateY(26px)}
+.kicker{
+  display:flex;align-items:center;gap:10px;margin:0;
+  font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+}
+.kicker .dot{width:6px;height:6px;background:var(--orange);flex:none;animation:dotPulse 3.2s var(--ease) infinite}
+@keyframes dotPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(.6);opacity:.5}}
+h1{
+  margin:18px 0 0;font-family:var(--display);font-weight:var(--dw);
+  font-size:clamp(84px,10.6vw,172px);line-height:.8;letter-spacing:-.05em;
+}
+h1 .ln{display:block;overflow:hidden;padding:.12em .04em .16em;margin:-.12em -.04em -.16em}
+h1 .ln-in{display:block}
+html.js #hero-title{opacity:0}
+html.js #hero-title.ready{opacity:1}
+h1 em{font-style:italic;font-weight:var(--dw)}
+h1 .punct{color:var(--orange)}
+.hero-role{
+  margin:28px 0 0;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;
+}
+.hero-role em{font-family:var(--display);font-weight:var(--dw);font-size:27px;letter-spacing:-.015em;text-transform:none;color:var(--ink);font-style:italic}
+.hero-role .sep{color:var(--orange)}
+.hero-lede{max-width:44ch;margin:22px 0 0;font-size:17.5px;line-height:1.6;color:var(--muted)}
+.hero-cta{display:flex;align-items:center;gap:28px;flex-wrap:wrap;margin-top:32px}
+.btn{
+  display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:var(--paper);
+  padding:15px 22px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;transition:box-shadow .25s var(--ease),background .25s,color .25s;
+}
+.btn span{font-size:14px;line-height:1}
+.btn:hover{box-shadow:4px 4px 0 var(--orange)}
+.link-arrow{
+  display:inline-flex;align-items:center;gap:9px;padding-bottom:4px;border-bottom:1px solid var(--rule);
+  font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;
+  transition:border-color .25s,color .25s;
+}
+.link-arrow span{color:var(--orange)}
+.link-arrow:hover{border-color:var(--ink)}
+.hero-meta{
+  display:flex;align-items:flex-end;gap:clamp(22px,3.2vw,48px);flex-wrap:wrap;
+  margin-top:40px;padding-top:20px;border-top:1px solid var(--rule);
+}
+.hero-meta div{display:flex;flex-direction:column;gap:3px}
+.hero-meta b{font-family:var(--display);font-weight:var(--dw);font-size:38px;line-height:.95;letter-spacing:-.035em;font-variant-numeric:tabular-nums}
+.hero-meta span{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.hero-meta .chips-palette{display:flex;flex-direction:row;gap:3px;margin-left:auto;padding-bottom:4px}
+.chips-palette i{width:10px;height:10px;background:var(--c);display:block}
+
+/* rack */
+.rack{
+  position:relative;height:min(66vh,620px);min-height:470px;perspective:1200px;
+}
+.rack-label{
+  position:absolute;left:-26px;top:50%;transform:translateY(-50%) rotate(-90deg);
+  font-family:var(--mono);font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--muted);white-space:nowrap;
+}
+.rack::before,.rack::after{
+  content:"";position:absolute;width:14px;height:14px;pointer-events:none;opacity:.5;
+}
+.rack::before{left:-8px;top:-8px;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.rack::after{right:-8px;bottom:-8px;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule)}
+.card{
+  position:absolute;margin:0;transform:translate3d(calc(var(--mx,0) * var(--depth,10) * 1px),calc(var(--my,0) * var(--depth,10) * 1px),0) rotate(var(--rot,0deg));
+  will-change:transform;
+}
+.card-in{
+  background:var(--paper);border:1px solid rgba(20,17,13,.16);
+  box-shadow:0 28px 55px -22px rgba(20,17,13,.45);
+  transition:box-shadow .35s var(--ease);
+}
+html.js .card-in{opacity:0;transform:translateY(60px)}
+.card:hover{z-index:20!important}
+.card:hover .card-in{box-shadow:0 38px 70px -20px rgba(20,17,13,.55)}
+.card .pxbox{display:block;position:relative;overflow:hidden}
+.card img{width:100%;height:auto}
+.card figcaption{
+  display:flex;justify-content:space-between;gap:8px;padding:8px 10px;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:8.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+}
+.card figcaption span:first-child{color:var(--ink)}
+.c1{left:0;top:7%;width:46%;--rot:-7deg;--depth:14;--d:1;z-index:1}
+.c2{right:0;top:0;width:46%;--rot:5deg;--depth:22;--d:2;z-index:3}
+.c3{left:8%;bottom:1%;width:38%;--rot:3deg;--depth:18;--d:3;z-index:4}
+.c4{right:0;bottom:6%;width:46%;--rot:-4deg;--depth:10;--d:4;z-index:2}
+
+/* ---------- marquee ---------- */
+.marquee{
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  background:var(--paper-2);overflow:hidden;padding:16px 0;
+}
+.marquee-track{display:flex;width:max-content;will-change:transform}
+.m-item{
+  display:flex;align-items:center;gap:28px;padding:0 28px;white-space:nowrap;
+  font-family:var(--display);font-weight:var(--dw);font-style:italic;font-size:clamp(23px,2.3vw,34px);letter-spacing:-.015em;
+}
+.m-item i{font-style:normal;font-size:13px;color:var(--c,var(--orange))}
+
+/* ---------- shared section furniture ---------- */
+.index-sec,.project,.studio{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.index-sec{padding-top:112px;padding-bottom:80px}
+.project{padding-top:104px;padding-bottom:104px;border-top:1px solid var(--rule);position:relative;scroll-margin-top:88px}
+.project::after{
+  content:attr(data-num);position:absolute;right:var(--pad);top:44px;z-index:0;pointer-events:none;
+  font-family:var(--display);font-weight:var(--dw);font-size:clamp(110px,15vw,220px);line-height:1;
+  color:var(--accent,#C08A2E);opacity:.04;
+}
+.project>*{position:relative;z-index:1}
+html.js .rv{opacity:0;transform:translateY(26px)}
+html.js .rv.in{opacity:1;transform:none}
+html.js .idx-row{opacity:0;transform:translateY(18px)}
+html.js .idx-row.in{opacity:1;transform:none}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.75fr);gap:40px;align-items:end;margin-bottom:64px}
+.sec-kicker{
+  grid-column:1/-1;display:flex;align-items:center;gap:16px;margin:0;
+  font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+}
+.sec-n{color:var(--ink);font-family:var(--display);font-style:italic;font-size:15px;letter-spacing:0}
+.sec-line{width:64px;height:1px;background:var(--rule);transform-origin:left}
+html.js .sec-line{transform:scaleX(0);transition:transform .9s var(--ease)}
+html.js .rv.in .sec-line,html.js .sec-head.in .sec-line{transform:scaleX(1)}
+.sec-head h2{
+  grid-column:1;margin:20px 0 0;font-family:var(--display);font-weight:var(--dw);
+  font-size:clamp(52px,6vw,88px);line-height:.9;letter-spacing:-.045em;text-wrap:balance;
+}
+.sec-head h2 em{font-style:italic}
+.sec-note{grid-column:2;margin:0 0 10px;max-width:36ch;font-size:16px;line-height:1.62;color:var(--muted)}
+
+/* ---------- work index ---------- */
+.idx{margin-top:6px}
+.idx-head,.idx-row{
+  display:grid;grid-template-columns:76px minmax(0,1.4fr) minmax(0,.9fr) 110px 44px;
+  gap:18px;align-items:center;
+}
+.idx-head{
+  padding:0 12px 14px;font-family:var(--mono);font-size:9px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+}
+.idx-head span:nth-child(4){text-align:right}
+.idx-row{
+  position:relative;padding:24px 12px;border-top:1px solid var(--rule);
+  transition:background .3s,color .3s,padding .3s var(--ease);
+}
+.idx-row:last-of-type{border-bottom:1px solid var(--rule)}
+.idx-row::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent,#F2581A);
+  transform:scaleY(0);transform-origin:top;transition:transform .3s var(--ease);
+}
+.idx-row:hover{background:var(--ink);color:var(--paper);padding-left:32px}
+.idx-row:hover::before{transform:scaleY(1)}
+.idx-n{font-family:var(--display);font-style:italic;font-size:16px;letter-spacing:0;color:var(--accent,#F2581A)}
+.idx-client{font-family:var(--display);font-weight:var(--dw);font-size:clamp(30px,3.6vw,50px);line-height:.95;letter-spacing:-.03em}
+.idx-client em{font-style:italic}
+.idx-disc,.idx-count{
+  font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);transition:color .3s;
+}
+.idx-count{text-align:right;font-variant-numeric:tabular-nums}
+.idx-arrow{font-size:20px;line-height:1;text-align:right;transition:transform .3s var(--ease)}
+.idx-row:hover .idx-disc,.idx-row:hover .idx-count{color:rgba(246,241,230,.58)}
+.idx-row:hover .idx-arrow{transform:translate(4px,-4px)}
+#idx-preview{
+  position:fixed;left:0;top:0;width:250px;height:330px;z-index:55;pointer-events:none;
+  opacity:0;will-change:transform,opacity;
+}
+#idx-preview .pv-in{
+  width:100%;height:100%;display:flex;flex-direction:column;overflow:hidden;
+  background:var(--paper);border:1px solid rgba(20,17,13,.2);
+  box-shadow:0 34px 70px -24px rgba(20,17,13,.55);
+  transform:scale(.92) rotate(-3deg);will-change:transform;
+}
+#idx-preview img{width:100%;flex:1;min-height:0;object-fit:cover;filter:grayscale(.12)}
+#idx-preview .pv-cap{
+  flex:none;display:flex;justify-content:space-between;gap:10px;padding:9px 11px;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+}
+#idx-preview .pv-cap span:first-child{color:var(--ink)}
+
+/* ---------- project sheet ---------- */
+.p-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(34px,6vw,80px);align-items:end;margin-bottom:56px}
+.p-kicker{
+  display:flex;align-items:center;gap:12px;margin:0;
+  font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+}
+.p-num{color:var(--accent,#F2581A);font-family:var(--display);font-style:italic;font-size:16px;letter-spacing:0}
+.p-slash{opacity:.4}
+.p-swatch{width:8px;height:8px;background:var(--accent,#F2581A);margin-left:2px;flex:none}
+.p-client{
+  margin:16px 0 0;font-family:var(--display);font-weight:700;
+  font-size:clamp(52px,7.4vw,120px);line-height:.84;letter-spacing:-.05em;text-wrap:balance;
+}
+.p-client em{font-style:italic}
+.p-meta{
+  margin:18px 0 0;font-family:var(--mono);font-size:10px;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
+}
+.p-meta span{color:var(--accent,#F2581A);margin:0 4px}
+.p-desc{max-width:44ch;margin:0 0 22px;font-size:16.5px;line-height:1.6}
+/* wide head: title owns the full measure, credits drop into a rule below */
+.p-head.wide{grid-template-columns:1fr;gap:30px}
+.p-head.wide .p-client{font-size:clamp(54px,9vw,148px)}
+.p-head.wide > div:last-child{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,430px);
+  gap:clamp(24px,4vw,64px);align-items:end;
+  padding-top:24px;border-top:1px solid var(--rule);
+}
+.p-head.wide .p-desc{max-width:none;margin:0}
+.p-head.wide .p-facts{padding-top:0;border-top:0}
+/* centred head: used once, for the identity suite */
+.p-head.center{grid-template-columns:1fr;justify-items:center;text-align:center;gap:28px}
+.p-head.center .p-kicker{justify-content:center}
+.p-head.center .p-client{margin-top:8px}
+.p-head.center .p-desc{max-width:54ch;margin:0 auto}
+.p-head.center .p-facts{justify-content:center;padding-top:0;border-top:0;margin-top:16px}
+.p-head.center .p-facts div{align-items:center}
+.p-facts{display:flex;flex-wrap:wrap;gap:32px;margin:0;padding-top:16px;border-top:1px solid var(--rule)}
+.p-facts div{display:flex;flex-direction:column;gap:4px}
+.p-facts dt{font-family:var(--mono);font-size:8.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+.p-facts dd{margin:0;font-size:14px}
+
+.p-grid{display:grid;gap:44px 24px;align-items:start}
+.g-gill{grid-template-columns:repeat(4,minmax(0,1fr))}
+.g-clinic,.g-nis{grid-template-columns:repeat(12,minmax(0,1fr))}
+.g-logo{grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 20px}
+.s4{grid-column:span 4}
+.s6{grid-column:span 6}
+.s8{grid-column:span 8}
+.s12{grid-column:span 12}
+
+.shot{min-width:0}
+.shot .pxbox{transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
+.shot-open:hover .pxbox{transform:translateY(-3px);box-shadow:0 20px 38px -26px rgba(20,17,13,.5)}
+.shot-open:focus-visible .pxbox{transform:translateY(-3px)}
+.shot-open{
+  display:block;width:100%;padding:0;border:0;background:none;text-align:left;cursor:pointer;position:relative;
+}
+.shot-open:focus-visible{outline:2px solid var(--accent,var(--orange));outline-offset:4px}
+.pxbox{display:block;position:relative;overflow:hidden;background:var(--paper-2);outline:1px solid rgba(20,17,13,.09);outline-offset:-1px}
+.pxbox img{width:100%;height:auto;will-change:transform}
+.shot-view{
+  position:absolute;top:10px;right:10px;z-index:3;padding:7px 9px;
+  background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:8.5px;
+  letter-spacing:.13em;text-transform:uppercase;opacity:0;transform:translateY(-6px);
+}
+.shot-open:focus-visible .shot-view{opacity:1;transform:none}
+.shot figcaption{
+  display:flex;justify-content:space-between;gap:12px;padding-top:10px;margin-top:11px;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+}
+/* plate number stays, the repeated label only arrives on hover/focus */
+.shot figcaption span:last-child{
+  opacity:0;transform:translateY(3px);
+  transition:opacity .35s var(--ease),transform .35s var(--ease);
+}
+.shot:hover figcaption span:last-child,
+.shot:focus-within figcaption span:last-child{opacity:1;transform:none}
+.shot figcaption span:first-child{color:var(--accent,#F2581A)}
+
+.sheet-note{
+  display:flex;flex-direction:column;justify-content:space-between;min-height:300px;
+  background:var(--paper-2);border:1px solid var(--rule);padding:clamp(24px,2.6vw,36px);
+}
+.sheet-note.stretch{align-self:stretch}
+.sheet-note .mono{color:var(--muted);margin:0}
+.sheet-note h3{
+  margin:12px 0 0;font-family:var(--display);font-weight:var(--dw);
+  font-size:clamp(30px,2.8vw,42px);line-height:1.02;letter-spacing:-.03em;
+}
+.sheet-note h3 em{font-style:italic}
+.sheet-note ol{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid var(--rule)}
+.sheet-note li{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid var(--rule);font-size:13px;line-height:1.45}
+.sheet-note li span{font-family:var(--mono);font-size:8px;color:var(--accent,#F2581A);padding-top:3px;flex:none}
+.sheet-note p{margin:18px 0 0;font-size:13.5px;line-height:1.55;color:var(--muted);max-width:34ch}
+
+.feature{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(30px,5.5vw,84px);align-items:center}
+.feature.rev{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+.feature-note .pull{
+  margin:18px 0 22px;font-family:var(--display);font-weight:var(--dw);
+  font-size:clamp(36px,4.4vw,64px);line-height:.98;letter-spacing:-.038em;
+}
+.feature-note .pull em{font-style:italic;color:var(--accent,#F2581A)}
+.feature-note>p{max-width:38ch;margin:0;font-size:15.5px;line-height:1.6;color:var(--muted)}
+.feature-note dl{display:flex;flex-wrap:wrap;gap:30px;margin:30px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.feature-note dt{font-family:var(--mono);font-size:8.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.feature-note dd{margin:0;font-size:14px}
+
+/* ---------- next sheet ---------- */
+.next-sheet{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:10px 24px;
+  margin-top:80px;padding-top:26px;border-top:1px solid var(--rule);
+}
+.ns-label{grid-column:1/-1;font-family:var(--mono);font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
+.ns-name{
+  font-family:var(--display);font-weight:var(--dw);font-size:clamp(32px,4.8vw,64px);
+  line-height:.95;letter-spacing:-.038em;
+}
+.ns-name em{font-style:italic;transition:color .3s}
+.ns-arrow{font-size:clamp(22px,2.4vw,34px);line-height:1;transition:transform .3s var(--ease)}
+.next-sheet:hover .ns-name em{color:var(--accent,var(--orange))}
+.next-sheet:hover .ns-arrow{transform:translate(5px,-5px)}
+
+/* ---------- studio ---------- */
+.studio{padding-top:112px;padding-bottom:112px;border-top:1px solid var(--rule)}
+.studio-top{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(40px,6vw,88px);align-items:start}
+.portrait{position:relative}
+.portrait .pxbox{box-shadow:16px 16px 0 rgba(242,88,26,.88);outline:1px solid rgba(20,17,13,.1)}
+.portrait figcaption{
+  display:flex;justify-content:space-between;gap:12px;margin-top:22px;padding-top:9px;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:9px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);
+}
+.portrait figcaption span:first-child{color:var(--ink)}
+.bio .lead{
+  margin:0 0 22px;font-family:var(--display);font-weight:var(--dw);color:var(--ink);
+  font-size:clamp(30px,2.9vw,44px);line-height:1.1;letter-spacing:-.032em;
+}
+.bio p{max-width:56ch;margin:0 0 16px;font-size:16px;line-height:1.62;color:var(--muted)}
+.bio p:last-of-type{
+  margin-top:24px;max-width:46ch;font-family:var(--display);font-size:22px;line-height:1.34;
+  letter-spacing:-.012em;color:var(--ink);
+}
+.chips{display:flex;flex-wrap:wrap;gap:7px;list-style:none;margin:28px 0 0;padding:0}
+.chips li{
+  display:flex;align-items:center;gap:7px;padding:8px 11px;border:1px solid var(--rule);
+  font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+}
+.chips li::before{content:"";width:5px;height:5px;background:var(--c,var(--orange));flex:none}
+.studio-bottom{
+  display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(40px,6vw,88px);
+  margin-top:84px;padding-top:48px;border-top:1px solid var(--rule);
+}
+.mini-head{
+  margin:0 0 18px;font-family:var(--mono);font-size:9.5px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+}
+.job{
+  display:grid;grid-template-columns:124px minmax(0,1fr) minmax(0,1.15fr);gap:20px;
+  align-items:baseline;padding:18px 0;border-top:1px solid var(--rule);
+}
+.job:last-child{border-bottom:1px solid var(--rule)}
+.job-yr{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;color:var(--muted);font-variant-numeric:tabular-nums}
+.job.now .job-yr{color:var(--orange)}
+.job b{display:block;font-family:var(--display);font-weight:var(--dw);font-size:24px;line-height:1.1;letter-spacing:-.02em}
+.job .role{display:block;margin-top:3px;font-family:var(--mono);font-size:8.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.job p{margin:0;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.edu{padding:16px 0;border-top:1px solid var(--rule)}
+.edu:last-of-type{border-bottom:1px solid var(--rule)}
+.edu b{display:block;font-family:var(--display);font-weight:var(--dw);font-size:20px;line-height:1.1}
+.edu span{display:block;margin-top:3px;font-family:var(--mono);font-size:8.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.side .mini-head+.mini-head{margin-top:32px}
+.software{margin:0;font-family:var(--mono);font-size:10px;line-height:1.95;letter-spacing:.03em;color:var(--muted)}
+.software b{font-weight:400;color:var(--ink)}
+
+/* ---------- contact + footer ---------- */
+.contact{position:relative;overflow:hidden;background:var(--ink);color:var(--paper);margin-top:34px}
+.spectrum{display:flex;height:6px}
+.spectrum i{flex:1;background:var(--c)}
+.contact-inner{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:96px var(--pad) 80px}
+.contact .sec-kicker{color:rgba(246,241,230,.55)}
+.contact .sec-n{color:var(--gold)}
+.contact .sec-line{background:rgba(246,241,230,.2)}
+.contact h2{
+  margin:22px 0 0;font-family:var(--display);font-weight:var(--dw);
+  font-size:clamp(60px,8.6vw,128px);line-height:1.08;letter-spacing:-.048em;
+}
+.contact h2 em{font-style:italic;color:var(--gold)}
+.mail{
+  display:inline-flex;align-items:center;gap:14px;margin-top:38px;padding-bottom:8px;
+  border-bottom:1px solid rgba(246,241,230,.3);
+  font-family:var(--display);font-weight:var(--dw);font-size:clamp(28px,3.8vw,52px);letter-spacing:-.022em;
+  transition:color .3s,border-color .3s;
+}
+.mail .mail-arrow{font-family:var(--text);font-size:.55em;color:var(--gold)}
+.mail .mail-txt{display:inline-block;white-space:nowrap}
+.mail:hover{color:var(--gold);border-color:var(--gold)}
+.contact-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,340px));gap:30px;
+  margin-top:54px;padding-top:26px;border-top:1px solid rgba(246,241,230,.16);
+}
+.contact-grid .mono{display:block;margin-bottom:8px;color:rgba(246,241,230,.42);font-size:9px}
+.contact-grid a,.contact-grid p{margin:0;font-size:16px;color:var(--paper)}
+.contact-grid a:hover{color:var(--gold)}
+.contact-cta{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-top:44px}
+.btn.light{background:var(--paper);color:var(--ink)}
+.btn.light:hover{box-shadow:4px 4px 0 var(--gold)}
+.link-arrow.light{color:var(--paper);border-color:rgba(246,241,230,.3)}
+.link-arrow.light:hover{border-color:var(--paper)}
+.contact-mark{
+  position:absolute;right:-40px;bottom:-70px;z-index:1;width:clamp(260px,30vw,430px);
+  opacity:.07;filter:grayscale(1) brightness(2);pointer-events:none;
+}
+footer{
+  position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  padding:24px var(--pad);background:var(--ink);border-top:1px solid rgba(246,241,230,.12);
+  font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(246,241,230,.55);
+}
+.f-brand{display:flex;align-items:center;gap:9px;color:var(--paper)}
+.f-brand img{width:22px;filter:grayscale(1) brightness(2)}
+footer a:hover{color:var(--gold)}
+
+/* ---------- lightbox ---------- */
+#lightbox{
+  position:fixed;inset:0;z-index:120;display:flex;align-items:center;justify-content:center;
+  background:rgba(14,12,9,.96);opacity:0;pointer-events:none;
+}
+#lightbox.open{pointer-events:auto}
+.lb-stage{max-width:min(1100px,86vw);text-align:center;transform:scale(.97)}
+#lb-img{max-height:74vh;max-width:100%;width:auto;margin:0 auto;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lb-bar{height:3px;width:100%;background:var(--orange);margin:16px 0 10px;transition:background .3s;transform-origin:0 50%}
+.lb-cap{
+  display:flex;justify-content:space-between;gap:30px;text-align:left;color:var(--paper);
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;
+}
+.lb-cap span:last-child{color:rgba(246,241,230,.5);text-align:right}
+.lb-x{
+  position:fixed;top:20px;right:24px;z-index:2;border:1px solid rgba(246,241,230,.3);background:none;
+  color:var(--paper);padding:9px 13px;font-family:var(--mono);font-size:9.5px;
+  letter-spacing:.14em;cursor:pointer;transition:background .25s,color .25s;
+}
+.lb-x:hover{background:var(--paper);color:var(--ink)}
+.lb-nav{
+  position:fixed;top:50%;transform:translateY(-50%);z-index:2;width:46px;height:46px;
+  border:1px solid rgba(246,241,230,.3);background:none;color:var(--paper);font-size:17px;
+  cursor:pointer;transition:background .25s,color .25s;
+}
+.lb-nav:hover{background:var(--paper);color:var(--ink)}
+.lb-prev{left:24px}
+.lb-next{right:24px}
+.lb-count{
+  position:fixed;left:50%;bottom:22px;transform:translateX(-50%);color:rgba(246,241,230,.5);
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;
+}
+
+/* ---------- split text ---------- */
+.ch{display:inline-block;transform-origin:50% 100%;will-change:transform,opacity}
+.chw{display:inline-block;white-space:nowrap}
+.mail .chw{white-space:normal}
+.w{display:inline-block;will-change:transform,opacity}
+.w-mask .w{overflow:hidden;vertical-align:top;padding:.1em .08em .18em;margin:-.1em -.08em -.18em}
+.w-mask .w-in{display:inline-block}
+
+/* ---------- statement band ---------- */
+.statement{background:var(--paper-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.statement-inner{max-width:var(--max);margin:0 auto;padding:clamp(52px,6.4vw,88px) var(--pad)}
+.statement-line{
+  margin:0;font-family:var(--display);font-weight:var(--dw);
+  font-size:clamp(36px,5.4vw,80px);line-height:1.02;letter-spacing:-.04em;text-wrap:balance;
+}
+.statement-line em{font-style:italic;color:var(--orange)}
+.statement + .project{border-top:0}
+
+/* ---------- responsive fallbacks (desktop-first) ---------- */
+@media (max-width:1180px){
+  .hero{grid-template-columns:1fr;min-height:0;padding-top:122px;gap:56px}
+  .hero-copy{max-width:780px}
+  .rack{width:100%;max-width:540px;height:530px;margin:0 auto}
+  .p-head{grid-template-columns:1fr;gap:24px}
+  .p-swatch{display:none}
+  .studio-top{grid-template-columns:1fr;gap:52px}
+  .portrait{max-width:420px}
+  .studio-bottom{grid-template-columns:1fr;gap:52px}
+  .feature,.feature.rev{grid-template-columns:1fr;gap:40px}
+  .feature.rev .feature-note{order:2}
+  .g-gill{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .idx-head,.idx-row{grid-template-columns:60px minmax(0,1.2fr) minmax(0,.9fr) 96px 36px}
+}
+@media (max-width:820px){
+  .nav{gap:17px;font-size:9px;letter-spacing:.12em}
+  .brand-txt i{display:none}
+  .hero{padding-top:108px}
+  h1{font-size:clamp(62px,14.5vw,108px)}
+  .sec-head{grid-template-columns:1fr}
+  .sec-note{grid-column:1}
+  .idx-head{display:none}
+  .idx-row{grid-template-columns:32px minmax(0,1fr) 36px;gap:8px}
+  .idx-client{font-size:clamp(24px,6.2vw,40px)}
+  .idx-disc,.idx-count{display:none}
+  .g-gill{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g-clinic,.g-nis{grid-template-columns:1fr}
+  .s4,.s6,.s8,.s12{grid-column:auto}
+  .g-logo{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 16px}
+  .studio-bottom,.contact-grid{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr;gap:5px}
+  .p-facts{gap:20px}
+  .p-head.wide > div:last-child{grid-template-columns:1fr;gap:20px}
+  .p-head.wide .p-client{font-size:clamp(46px,11.5vw,96px)}
+  .contact h2{font-size:clamp(46px,12.4vw,80px);line-height:1.08}
+  .mail{font-size:clamp(18px,5.6vw,24px);word-break:normal;overflow-wrap:anywhere}
+  .contact-mark{opacity:.05}
+  .lb-nav{width:38px;height:38px}
+  .lb-prev{left:10px}.lb-next{right:10px}
+}
+@media (max-width:480px){
+  #topbar{gap:12px;padding:0 18px}
+  .nav{gap:13px;font-size:8.5px;letter-spacing:.08em}
+  .brand-txt b{font-size:15px}
+  .hero-role .sep{display:none}
+  .next-sheet{margin-top:56px}
+}
+@media (max-width:820px){
+  footer{padding:20px var(--pad);gap:12px}
+  footer p{display:none}
+}
+/* short desktop windows: keep the whole contact sheet above the fold */
+@media (min-width:821px) and (max-height:900px){
+  .contact-inner{padding-top:52px;padding-bottom:40px}
+  .contact h2{margin-top:10px}
+  .mail{margin-top:22px}
+  .contact-grid{margin-top:30px;padding-top:16px}
+  .contact-cta{margin-top:26px}
+}
+@media (min-width:821px) and (max-height:760px){
+  .contact-inner{padding-top:44px;padding-bottom:32px}
+  .contact h2{margin-top:8px}
+  .mail{margin-top:18px}
+  .contact-grid{margin-top:24px;padding-top:12px}
+  .contact-cta{margin-top:20px}
+  footer{padding:18px var(--pad)}
+  footer p{display:none}
+}
+@media (min-width:821px) and (max-height:720px){
+  .contact-inner{padding-top:40px;padding-bottom:26px}
+  .contact h2{font-size:clamp(44px,6.6vw,88px);margin-top:8px}
+  .mail{margin-top:16px}
+  .contact-grid{margin-top:22px;padding-top:12px}
+  .contact-cta{margin-top:18px}
+}
+@media (min-width:821px) and (max-height:640px){
+  .contact-inner{padding-top:36px;padding-bottom:22px}
+  .contact h2{font-size:clamp(40px,5.4vw,72px)}
+  .mail{margin-top:14px}
+  .contact-grid{margin-top:18px;padding-top:10px}
+  .contact-cta{margin-top:16px}
+}
+/* landscape tablet / short narrow window */
+@media (min-width:601px) and (max-width:820px) and (max-height:760px){
+  .contact-inner{padding-top:52px;padding-bottom:36px}
+  .contact h2{font-size:clamp(40px,8vw,68px);margin-top:10px}
+  .mail{margin-top:22px}
+  .contact-grid{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:30px;padding-top:16px}
+  .contact-cta{margin-top:26px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  html.js .rv,html.js .idx-row{opacity:1;transform:none}
+  html.js .hero-el{opacity:1;transform:none}
+  html.js .card-in{opacity:1;transform:none}
+}
+</style>
+<noscript><style>#intro{display:none}html .rv,html .idx-row{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div id="spotlight" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true"></div>
+
+<!-- ================= INTRO ================= -->
+<div id="intro" role="dialog" aria-label="N!S Graphics intro">
+  <div class="intro-inner">
+    <svg class="intro-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 826 946" fill-rule="evenodd" role="img" aria-label="N!S Graphics" color="#111">
+      <g class="mk">
+        <path class="blk" style="--k:0" fill="#79D3DB" d="M399.5 357.0 322.2 434.5 407.5 519.5 484.8 441.5Z"/>
+        <path class="blk" style="--k:1" fill="#35B5BE" d="M322.5 279.2 245.0 356.5 321.2 434.5 399.5 356.5Z"/>
+        <path class="blk" style="--k:2" fill="#4CC2A2" d="M189.5 147.0 112.2 224.5 244.2 356.8 321.8 278.5Z"/>
+        <path class="blk" style="--k:3" fill="#79D3DB" d="M270.5 66.2 189.2 146.2 269.5 225.8 349.8 146.2Z"/>
+        <path class="blk" style="--k:4" fill="#F2581A" d="M270.2 65.5 350.5 145.5 361.2 133.8 376.5 122.8 389.5 116.8 398.5 114.8 419.2 114.8 433.2 118.8 443.2 123.8 458.2 134.8 536.8 56.5 525.5 46.0 508.2 33.0 491.2 23.0 468.2 13.0 451.2 8.0 436.2 5.0 429.5 5.0 428.2 4.0 389.5 4.0 388.2 5.0 381.5 5.0 380.2 6.0 370.5 7.0 355.5 11.0 336.5 18.0 316.5 28.0 289.2 47.0Z"/>
+        <path class="blk" style="--k:5" fill="#ED1B24" d="M537.2 57.2 532.2 61.0 458.2 135.5 546.5 223.5 624.8 144.5Z"/>
+        <path class="blk" style="--k:6" fill="#ED096B" d="M626.2 145.0 547.2 223.2 625.2 301.5 703.5 223.5Z"/>
+        <path class="blk" style="--k:7" fill="#851C81" d="M547.2 224.2 481.2 290.5 559.2 367.8 624.8 301.5Z"/>
+      </g>
+      <g class="wm">
+        <path class="ltr" style="--k:0" fill="#F2581A" d="M4.0 788.5 4.5 840.8 58.8 840.2 58.2 788.0Z"/>
+        <path class="ltr" style="--k:1" fill="#F2581A" d="M33.5 584.0 24.0 593.2 16.0 604.5 9.0 619.5 5.0 635.5 5.0 641.2 4.0 642.5 4.0 767.2 58.8 767.2 58.8 638.5 62.8 628.5 67.2 623.8 76.5 619.8 160.2 619.8 168.2 622.8 174.0 628.5 178.0 638.5 178.0 840.2 232.2 840.8 232.8 642.5 227.8 619.5 220.8 604.5 213.8 594.5 204.5 585.0 193.2 577.0 178.2 570.0 158.2 565.0 78.5 565.0 68.5 567.0 53.5 572.0 43.5 577.0Z"/>
+        <path class="ltr" style="--k:2" fill="#F2581A" d="M383.0 788.5 383.5 840.8 437.8 840.2 437.2 788.0Z"/>
+        <path class="ltr" style="--k:3" fill="#F2581A" d="M383.5 565.0 383.0 767.2 437.2 767.8 437.8 565.5Z"/>
+        <path class="ltr" style="--k:4" fill="#F2581A" d="M624.5 575.0 611.2 584.0 603.0 592.5 596.0 602.5 591.0 612.5 587.0 624.5 585.0 633.5 585.0 639.2 584.0 640.5 584.0 660.2 588.0 674.2 596.0 688.2 612.5 705.8 622.5 712.8 638.5 720.8 650.5 724.8 669.5 728.8 677.2 728.8 678.5 729.8 711.2 729.8 735.2 734.8 743.2 738.8 752.0 746.5 756.0 755.5 756.0 763.2 750.0 776.5 743.2 782.0 733.2 786.0 595.5 786.0 595.0 799.2 596.0 800.5 597.0 840.2 740.2 840.8 760.2 834.8 774.2 827.8 786.5 818.8 795.8 808.2 804.8 792.2 809.8 775.2 810.8 749.5 809.8 748.2 808.8 738.5 804.8 729.5 792.8 711.5 786.8 704.2 775.2 694.0 761.2 685.0 746.2 679.0 731.2 676.0 678.5 676.0 677.2 675.0 665.5 674.0 651.5 670.0 639.5 663.0 633.8 656.2 631.8 651.2 631.8 639.5 633.8 633.5 640.5 625.8 647.5 621.8 658.5 618.8 783.2 618.8 783.8 606.5 784.8 605.2 785.8 565.5 661.5 565.0 660.2 566.0 652.5 566.0 639.5 569.0Z"/>
+      </g>
+      <g class="sb">
+        <path class="gl" style="--k:0" fill="currentColor" d="M23.5 892.0 16.2 896.0 11.0 901.5 8.0 907.5 7.0 911.5 8.0 925.2 13.0 934.2 22.5 940.8 25.5 941.8 40.2 941.8 43.2 940.8 49.5 936.8 53.8 932.2 57.8 923.2 57.8 914.5 30.5 914.0 30.5 919.8 49.0 920.5 49.0 923.2 43.2 932.0 38.2 935.0 31.5 936.0 23.5 933.0 16.8 925.2 15.8 922.2 15.8 911.5 16.8 908.5 21.5 901.8 29.5 897.8 39.2 898.8 42.5 900.8 47.5 906.8 56.2 906.8 55.8 903.5 49.5 896.0 42.2 892.0 38.2 891.0Z"/>
+        <path class="gl" style="--k:1" fill="currentColor" d="M132.5 892.0 132.0 941.2 139.8 941.2 139.8 922.5 145.2 921.8 157.5 941.8 166.2 941.8 165.8 938.5 155.8 922.2 157.5 919.8 160.5 918.8 165.8 912.2 165.8 900.5 160.2 894.0 155.2 892.0ZM139.8 898.5 151.2 897.8 155.2 899.8 158.0 904.5 157.0 911.2 154.2 914.0 149.2 916.0 140.5 916.0Z"/>
+        <path class="gl" style="--k:2" fill="currentColor" d="M257.5 892.0 242.0 932.5 240.0 941.2 247.2 941.8 252.5 930.8 271.2 930.8 276.5 941.8 283.2 941.8 283.8 938.5 266.8 892.5ZM261.5 904.8 263.0 905.5 265.0 913.2 267.0 916.5 269.0 922.5 268.2 925.0 254.8 924.2 254.8 921.5Z"/>
+        <path class="gl" style="--k:3" fill="currentColor" d="M382.2 892.0 358.0 892.5 358.5 941.8 365.8 941.2 366.5 920.8 381.2 920.8 387.5 917.8 391.8 912.2 391.8 900.5 387.5 895.0ZM365.8 898.5 377.2 897.8 381.2 899.8 384.0 904.5 384.0 908.2 382.0 912.2 377.2 915.0 366.5 915.0Z"/>
+        <path class="gl" style="--k:4" fill="currentColor" d="M466.5 892.0 466.0 941.2 473.8 941.2 474.5 918.8 496.2 918.8 497.0 941.2 504.2 941.8 504.8 892.5 497.0 892.5 496.2 913.0 474.5 913.0 473.8 892.5Z"/>
+        <path class="gl" style="--k:5" fill="currentColor" d="M582.5 892.0 582.0 941.2 589.2 941.8 589.8 892.5Z"/>
+        <path class="gl" style="--k:6" fill="currentColor" d="M683.5 891.0 674.5 895.0 668.0 901.5 664.0 911.5 665.0 925.2 670.0 934.2 675.5 938.8 682.5 941.8 697.2 941.8 708.5 935.8 713.5 927.2 704.5 927.0 700.2 932.0 692.2 936.0 684.5 935.0 679.2 932.0 673.8 925.2 672.8 922.2 672.8 911.5 673.8 908.5 678.2 901.8 685.5 897.8 694.2 897.8 699.5 900.8 704.5 906.8 713.5 906.2 710.8 900.5 705.2 895.0 696.2 891.0Z"/>
+        <path class="gl" style="--k:7" fill="currentColor" d="M795.5 892.0 791.2 895.0 788.0 899.5 787.0 903.5 788.0 910.2 792.5 915.8 810.2 921.8 814.0 926.5 814.0 930.2 811.2 934.0 807.2 936.0 802.5 936.0 797.8 932.5 795.2 928.0 787.5 928.0 787.0 931.2 788.0 934.2 793.5 939.8 797.5 941.8 812.2 941.8 817.5 938.8 821.8 933.2 821.8 922.5 817.2 917.0 799.5 911.0 795.8 906.2 795.8 902.5 798.5 898.8 804.2 896.8 809.2 898.8 813.5 903.8 821.2 903.8 820.8 898.5 815.2 893.0 810.2 891.0Z"/>
+      </g>
+    </svg>
+    <div class="intro-meta"><span>N!S Graphics</span><span>Portfolio — 2026</span></div>
+    <div class="intro-bar" aria-hidden="true">
+      <i style="--c:#79D3DB;--k:0"></i><i style="--c:#35B5BE;--k:1"></i><i style="--c:#4CC2A2;--k:2"></i><i style="--c:#F2581A;--k:3"></i><i style="--c:#ED1B24;--k:4"></i><i style="--c:#ED096B;--k:5"></i><i style="--c:#851C81;--k:6"></i><i style="--c:#C08A2E;--k:7"></i>
+    </div>
+  </div>
+  <button class="intro-skip" type="button">Skip intro</button>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header id="topbar">
+  <a class="brand" href="#top" aria-label="N!S Graphics — back to top">
+    <img src="assets/nis-mark.svg" alt="" width="30" height="26">
+    <span class="brand-txt"><b>N!S Graphics</b><i>Nilotpal Saha · Kolkata</i></span>
+  </a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#work"><span class="roll"><span>Work</span><span aria-hidden="true">Work</span></span></a>
+    <a href="#studio"><span class="roll"><span>Studio</span><span aria-hidden="true">Studio</span></span></a>
+    <a href="#contact"><span class="roll"><span>Contact</span><span aria-hidden="true">Contact</span></span></a>
+  </nav>
+</header>
+
+<main id="top">
+<!-- ================= HERO ================= -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="kicker hero-el" style="--i:0"><span class="dot"></span> N!S Graphics — Kolkata, India</p>
+    <h1 id="hero-title"><span class="ln"><span class="ln-in">Nilotpal</span></span><span class="ln"><span class="ln-in"><em>Saha</em><span class="punct">.</span></span></span></h1>
+    <p class="hero-role hero-el" style="--i:2">Senior graphic designer <span class="sep">·</span> <em>print, identity &amp; screen</em></p>
+    <p class="hero-lede hero-el" style="--i:3">Campaign posters, brand systems and everyday communication — made in Kolkata for clients across travel, healthcare, education and retail.</p>
+    <div class="hero-cta hero-el" style="--i:4">
+      <a class="btn" href="#work">View selected work <span>↓</span></a>
+      <a class="link-arrow" href="assets/nilotpal_resume.pdf" download>Download CV <span>↗</span></a>
+    </div>
+    <div class="hero-meta hero-el" style="--i:5">
+      <div><b>28</b><span>pieces</span></div>
+      <div><b>06</b><span>clients</span></div>
+      <div><b>2019</b><span>since</span></div>
+      <div class="chips-palette" aria-hidden="true">
+        <i style="--c:#79D3DB"></i><i style="--c:#35B5BE"></i><i style="--c:#4CC2A2"></i><i style="--c:#F2581A"></i><i style="--c:#ED1B24"></i><i style="--c:#ED096B"></i><i style="--c:#851C81"></i><i style="--c:#C08A2E"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="rack" aria-label="A selection of recent work">
+    <span class="rack-label">Selected work — 2019 / 2026</span>
+    <figure class="card c1">
+      <div class="card-in">
+        <span class="pxbox"><img src="assets/opt/gill201.jpg" width="1000" height="1276" alt="Gill Travels campaign poster" fetchpriority="high"></span>
+        <figcaption><span>Gill Travels</span><span>Poster</span></figcaption>
+      </div>
+    </figure>
+    <figure class="card c2">
+      <div class="card-in">
+        <span class="pxbox"><img src="assets/opt/eventposter.jpg" width="1082" height="1400" alt="A.G.C. Bose College event poster" fetchpriority="high"></span>
+        <figcaption><span>A.G.C. Bose College</span><span>Event</span></figcaption>
+      </div>
+    </figure>
+    <figure class="card c3">
+      <div class="card-in">
+        <span class="pxbox"><img src="assets/opt/etutor.jpg" width="1080" height="1080" alt="The EtuTor Home brand artwork"></span>
+        <figcaption><span>The EtuTor Home</span><span>Brand</span></figcaption>
+      </div>
+    </figure>
+    <figure class="card c4">
+      <div class="card-in">
+        <span class="pxbox"><img src="assets/opt/durga1.jpg" width="1400" height="560" alt="Image Clinic Durga Puja campaign banner"></span>
+        <figcaption><span>Image Clinic</span><span>Campaign</span></figcaption>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="m-item"><i style="--c:#35B5BE">✳</i> Gill Travels</span>
+    <span class="m-item"><i style="--c:#ED1B24">✳</i> Image Clinic</span>
+    <span class="m-item"><i style="--c:#851C81">✳</i> DesignLogo</span>
+    <span class="m-item"><i style="--c:#4CC2A2">✳</i> The EtuTor Home</span>
+    <span class="m-item"><i style="--c:#F2581A">✳</i> A.G.C. Bose College</span>
+    <span class="m-item"><i style="--c:#ED096B">✳</i> N!S Graphics</span>
+    <span class="m-item"><i style="--c:#35B5BE">✳</i> Gill Travels</span>
+    <span class="m-item"><i style="--c:#ED1B24">✳</i> Image Clinic</span>
+    <span class="m-item"><i style="--c:#851C81">✳</i> DesignLogo</span>
+    <span class="m-item"><i style="--c:#4CC2A2">✳</i> The EtuTor Home</span>
+    <span class="m-item"><i style="--c:#F2581A">✳</i> A.G.C. Bose College</span>
+    <span class="m-item"><i style="--c:#ED096B">✳</i> N!S Graphics</span>
+  </div>
+</div>
+
+<!-- ================= WORK INDEX ================= -->
+<section class="index-sec" id="work" aria-labelledby="work-title">
+  <div class="sec-head rv">
+    <p class="sec-kicker"><span class="sec-n">01</span><span class="sec-line"></span><span>Selected work</span></p>
+    <h2 id="work-title">Six clients.<br><em>Twenty-eight pieces.</em></h2>
+    <p class="sec-note">A working archive of posters, identities and campaigns — shown at their real proportions. Hover an entry to preview, click to jump to the sheet.</p>
+  </div>
+  <div class="idx">
+    <div class="idx-head" aria-hidden="true"><span>No.</span><span>Client</span><span>Discipline</span><span>Pieces</span><span></span></div>
+    <a class="idx-row" href="#gill" style="--accent:#35B5BE" data-preview="assets/opt/gill210.jpg" data-cap="Gill Travels — campaign poster">
+      <span class="idx-n">01</span>
+      <span class="idx-client">Gill <em>Travels</em></span>
+      <span class="idx-disc">Campaign posters</span>
+      <span class="idx-count">12 pieces</span>
+      <span class="idx-arrow">↗</span>
+    </a>
+    <a class="idx-row" href="#clinic" style="--accent:#ED1B24" data-preview="assets/opt/nurses.jpg" data-cap="Image Clinic — healthcare campaign">
+      <span class="idx-n">02</span>
+      <span class="idx-client">Image <em>Clinic</em></span>
+      <span class="idx-disc">Healthcare campaigns</span>
+      <span class="idx-count">6 pieces</span>
+      <span class="idx-arrow">↗</span>
+    </a>
+    <a class="idx-row" href="#designlogo" style="--accent:#851C81" data-preview="assets/opt/logo2.jpg" data-cap="DesignLogo — identity mark">
+      <span class="idx-n">03</span>
+      <span class="idx-client">Design<em>Logo</em></span>
+      <span class="idx-disc">Identity &amp; marks</span>
+      <span class="idx-count">4 pieces</span>
+      <span class="idx-arrow">↗</span>
+    </a>
+    <a class="idx-row" href="#etutor" style="--accent:#4CC2A2" data-preview="assets/opt/etutor.jpg" data-cap="The EtuTor Home — brand artwork">
+      <span class="idx-n">04</span>
+      <span class="idx-client">The EtuTor <em>Home</em></span>
+      <span class="idx-disc">Brand artwork</span>
+      <span class="idx-count">1 piece</span>
+      <span class="idx-arrow">↗</span>
+    </a>
+    <a class="idx-row" href="#agc" style="--accent:#F2581A" data-preview="assets/opt/eventposter.jpg" data-cap="A.G.C. Bose College — event poster">
+      <span class="idx-n">05</span>
+      <span class="idx-client">A.G.C. Bose <em>College</em></span>
+      <span class="idx-disc">Event identity</span>
+      <span class="idx-count">1 piece</span>
+      <span class="idx-arrow">↗</span>
+    </a>
+    <a class="idx-row" href="#nis" style="--accent:#ED096B" data-preview="assets/opt/photomanip.jpg" data-cap="N!S Graphics — self-initiated">
+      <span class="idx-n">06</span>
+      <span class="idx-client">N!S <em>Graphics</em></span>
+      <span class="idx-disc">Self-initiated</span>
+      <span class="idx-count">4 pieces</span>
+      <span class="idx-arrow">↗</span>
+    </a>
+  </div>
+</section>
+
+<div id="idx-preview" aria-hidden="true">
+  <div class="pv-in">
+    <img id="pv-img" src="assets/opt/gill210.jpg" alt="">
+    <div class="pv-cap"><span id="pv-cap">Gill Travels</span><span>Preview</span></div>
+  </div>
+</div>
+
+<!-- ================= STATEMENT ================= -->
+<section class="statement" aria-label="Practice">
+  <div class="statement-inner">
+    <p class="statement-line">From brief to press file — <em>posters, print, social and video.</em></p>
+  </div>
+</section>
+
+<!-- ================= 01 GILL TRAVELS ================= -->
+<section class="project" id="gill" data-num="01" style="--accent:#35B5BE" aria-labelledby="gill-title">
+  <div class="p-head rv">
+    <div>
+      <p class="p-kicker"><span class="p-num">01</span><span class="p-slash">/</span><span>Sheet 01 — 06</span><span class="p-swatch"></span></p>
+      <h2 class="p-client" id="gill-title">Gill <em>Travels</em></h2>
+      <p class="p-meta">Campaign posters <span>·</span> 12 pieces</p>
+    </div>
+    <div>
+      <p class="p-desc">A running poster series for Gill Travels — twelve pieces from the campaign archive, shown at full poster proportion.</p>
+      <dl class="p-facts">
+        <div><dt>Discipline</dt><dd>Campaign posters</dd></div>
+        <div><dt>Pieces</dt><dd>12</dd></div>
+        <div><dt>Format</dt><dd>Poster series</dd></div>
+      </dl>
+    </div>
+  </div>
+  <div class="p-grid g-gill">
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="Gill Travels" data-cap="Campaign poster 01" aria-label="Open Gill Travels campaign poster 01">
+        <span class="pxbox"><img src="assets/opt/gill76.jpg" width="1000" height="1276" alt="Gill Travels campaign poster 01" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>01</span><span>Campaign poster</span></figcaption>
+    </figure>
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="Gill Travels" data-cap="Campaign poster 02" aria-label="Open Gill Travels campaign poster 02">
+        <span class="pxbox"><img src="assets/opt/gill181.jpg" width="1000" height="1276" alt="Gill Travels campaign poster 02" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>02</span><span>Campaign poster</span></figcaption>
+    </figure>
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="Gill Travels" data-cap="Campaign poster 03" aria-label="Open Gill Travels campaign poster 03">
+        <span class="pxbox"><img src="assets/opt/gill183.jpg" width="1000" height="1276" alt="Gill Travels campaign poster 03" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>03</span><span>Campaign poster</span></figcaption>
+    </figure>
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="Gill Travels" data-cap="Campaign poster 04" aria-label="Open Gill Travels campaign poster 04">
+        <span class="pxbox"><img src="assets/opt/gill186.jpg" width="1000" height="1276" alt="Gill Travels campaign poster 04" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>04</span><span>Campaign poster</span></figcaption>
+    </figure>
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="Gill Travels" data-cap="Campaign poster 05" aria-label="Open Gill Travels campaign poster 05">
+        <span class="pxbox"><img src="assets/opt/gill196.jpg" width="1000" height="1276" alt="Gill Travels campaign poster 05" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>05</span><span>Campaign poster</span></figcaption>
+    </figure>
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="Gill Travels" data-cap="Campaign poster 06" aria-label="Open Gill Travels campaign poster 06">
+        <span class="pxbox"><img src="assets/opt/gill201.jpg" width="1000" height="1276" alt="Gill Travels campaign poster 06" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>06</span><span>Campaign poster</span></figcaption>
+    </figure>
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="Gill Travels" data-cap="Campaign poster 07" aria-label="Open Gill Travels campaign poster 07">
+        <span class="pxbox"><img src="assets/opt/gill203.jpg" width="1000" height="1276" alt="Gill Travels campaign poster 07" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>07</span><span>Campaign poster</span></figcaption>
+    </figure>
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="Gill Travels" data-cap="Campaign poster 08" aria-label="Open Gill Travels campaign poster 08">
+        <span class="pxbox"><img src="assets/opt/gill204.jpg" width="1000" height="1276" alt="Gill Travels campaign poster 08" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>08</span><span>Campaign poster</span></figcaption>
+    </figure>
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="Gill Travels" data-cap="Campaign poster 09" aria-label="Open Gill Travels campaign poster 09">
+        <span class="pxbox"><img src="assets/opt/gill208.jpg" width="1000" height="1276" alt="Gill Travels campaign poster 09" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>09</span><span>Campaign poster</span></figcaption>
+    </figure>
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="Gill Travels" data-cap="Campaign poster 10" aria-label="Open Gill Travels campaign poster 10">
+        <span class="pxbox"><img src="assets/opt/gill210.jpg" width="1000" height="1276" alt="Gill Travels campaign poster 10" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>10</span><span>Campaign poster</span></figcaption>
+    </figure>
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="Gill Travels" data-cap="Campaign poster 11" aria-label="Open Gill Travels campaign poster 11">
+        <span class="pxbox"><img src="assets/opt/gill211.jpg" width="1000" height="1276" alt="Gill Travels campaign poster 11" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>11</span><span>Campaign poster</span></figcaption>
+    </figure>
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="Gill Travels" data-cap="Ram Navami poster" aria-label="Open Gill Travels Ram Navami poster">
+        <span class="pxbox"><img src="assets/opt/gillramnavami.jpg" width="1080" height="1080" alt="Gill Travels Ram Navami poster" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>12</span><span>Ram Navami poster</span></figcaption>
+    </figure>
+  </div>
+  <a class="next-sheet rv" href="#clinic">
+    <span class="ns-label">Next sheet — 02 / 06</span>
+    <span class="ns-name">Image <em>Clinic</em></span>
+    <span class="ns-arrow">↗</span>
+  </a>
+</section>
+
+<!-- ================= 02 IMAGE CLINIC ================= -->
+<section class="project" id="clinic" data-num="02" style="--accent:#ED1B24" aria-labelledby="clinic-title">
+  <div class="p-head wide rv">
+    <div>
+      <p class="p-kicker"><span class="p-num">02</span><span class="p-slash">/</span><span>Sheet 02 — 06</span><span class="p-swatch"></span></p>
+      <h2 class="p-client" id="clinic-title">Image <em>Clinic</em></h2>
+      <p class="p-meta">Healthcare campaigns <span>·</span> 6 pieces</p>
+    </div>
+    <div>
+      <p class="p-desc">Festival banners, seasonal greetings and awareness posts from the Image Clinic archive — healthcare communication at banner and social scale.</p>
+      <dl class="p-facts">
+        <div><dt>Discipline</dt><dd>Healthcare campaigns</dd></div>
+        <div><dt>Pieces</dt><dd>6</dd></div>
+        <div><dt>Format</dt><dd>Banners / social</dd></div>
+      </dl>
+    </div>
+  </div>
+  <div class="p-grid g-clinic">
+    <figure class="shot rv s12">
+      <button class="shot-open" type="button" data-client="Image Clinic" data-cap="Durga Puja banner 01" aria-label="Open Image Clinic Durga Puja banner 01">
+        <span class="pxbox"><img src="assets/opt/durga1.jpg" width="1400" height="560" alt="Image Clinic Durga Puja banner 01" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>01</span><span>Durga Puja banner</span></figcaption>
+    </figure>
+    <figure class="shot rv s6">
+      <button class="shot-open" type="button" data-client="Image Clinic" data-cap="Durga Puja banner 02" aria-label="Open Image Clinic Durga Puja banner 02">
+        <span class="pxbox"><img src="assets/opt/durga2.jpg" width="1400" height="560" alt="Image Clinic Durga Puja banner 02" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>02</span><span>Durga Puja banner</span></figcaption>
+    </figure>
+    <figure class="shot rv s6">
+      <button class="shot-open" type="button" data-client="Image Clinic" data-cap="Durga Puja banner 03" aria-label="Open Image Clinic Durga Puja banner 03">
+        <span class="pxbox"><img src="assets/opt/durga3.jpg" width="1400" height="560" alt="Image Clinic Durga Puja banner 03" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>03</span><span>Durga Puja banner</span></figcaption>
+    </figure>
+    <figure class="shot rv s6">
+      <button class="shot-open" type="button" data-client="Image Clinic" data-cap="Healthcare campaign — nurses" aria-label="Open Image Clinic healthcare campaign artwork">
+        <span class="pxbox"><img src="assets/opt/nurses.jpg" width="894" height="630" alt="Image Clinic healthcare campaign artwork" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>04</span><span>Healthcare campaign</span></figcaption>
+    </figure>
+    <figure class="shot rv s6">
+      <button class="shot-open" type="button" data-client="Image Clinic" data-cap="Holi greeting" aria-label="Open Image Clinic Holi greeting">
+        <span class="pxbox"><img src="assets/opt/holi.jpg" width="800" height="448" alt="Image Clinic Holi greeting" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>05</span><span>Holi greeting</span></figcaption>
+    </figure>
+    <figure class="shot rv s6">
+      <button class="shot-open" type="button" data-client="Image Clinic" data-cap="Awareness poster" aria-label="Open Image Clinic awareness poster">
+        <span class="pxbox"><img src="assets/opt/desperation.jpg" width="570" height="395" alt="Image Clinic awareness poster" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>06</span><span>Awareness poster</span></figcaption>
+    </figure>
+    <aside class="sheet-note stretch s6 rv">
+      <div>
+        <p class="mono">Formats</p>
+        <h3>Six pieces,<br><em>one clinic.</em></h3>
+      </div>
+      <p>Festival greetings, a healthcare campaign and social formats — built to be read at banner scale, on a phone or across a room.</p>
+    </aside>
+  </div>
+  <a class="next-sheet rv" href="#designlogo">
+    <span class="ns-label">Next sheet — 03 / 06</span>
+    <span class="ns-name">Design<em>Logo</em></span>
+    <span class="ns-arrow">↗</span>
+  </a>
+</section>
+
+<!-- ================= 03 DESIGNLOGO ================= -->
+<section class="project" id="designlogo" data-num="03" style="--accent:#851C81" aria-labelledby="designlogo-title">
+  <div class="p-head center rv">
+    <div>
+      <p class="p-kicker"><span class="p-num">03</span><span class="p-slash">/</span><span>Sheet 03 — 06</span><span class="p-swatch"></span></p>
+      <h2 class="p-client" id="designlogo-title">Design<em>Logo</em></h2>
+      <p class="p-meta">Identity &amp; marks <span>·</span> 4 pieces</p>
+    </div>
+    <div>
+      <p class="p-desc">Marks and identity studies for DesignLogo and DigiSource — four pieces from the identity archive, shown large enough to read the details.</p>
+      <dl class="p-facts">
+        <div><dt>Discipline</dt><dd>Identity &amp; marks</dd></div>
+        <div><dt>Pieces</dt><dd>4</dd></div>
+        <div><dt>Format</dt><dd>Logo suite</dd></div>
+      </dl>
+    </div>
+  </div>
+  <div class="p-grid g-logo">
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="DesignLogo" data-cap="Identity mark 01" aria-label="Open DesignLogo identity mark 01">
+        <span class="pxbox"><img src="assets/opt/logo1.jpg" width="1080" height="1080" alt="DesignLogo identity mark 01" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>01</span><span>Identity mark</span></figcaption>
+    </figure>
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="DesignLogo" data-cap="Identity mark 02" aria-label="Open DesignLogo identity mark 02">
+        <span class="pxbox"><img src="assets/opt/logo2.jpg" width="1080" height="1080" alt="DesignLogo identity mark 02" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>02</span><span>Identity mark</span></figcaption>
+    </figure>
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="DesignLogo" data-cap="Identity mark 03" aria-label="Open DesignLogo identity mark 03">
+        <span class="pxbox"><img src="assets/opt/logo3.jpg" width="1080" height="1080" alt="DesignLogo identity mark 03" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>03</span><span>Identity mark</span></figcaption>
+    </figure>
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="DesignLogo" data-cap="DigiSource identity" aria-label="Open DigiSource identity artwork">
+        <span class="pxbox"><img src="assets/opt/digisource.jpg" width="1080" height="1080" alt="DigiSource identity artwork" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>04</span><span>DigiSource identity</span></figcaption>
+    </figure>
+  </div>
+  <a class="next-sheet rv" href="#etutor">
+    <span class="ns-label">Next sheet — 04 / 06</span>
+    <span class="ns-name">The EtuTor <em>Home</em></span>
+    <span class="ns-arrow">↗</span>
+  </a>
+</section>
+
+<!-- ================= 04 ETUTOR ================= -->
+<section class="project" id="etutor" data-num="04" style="--accent:#4CC2A2" aria-labelledby="etutor-title">
+  <div class="p-head rv">
+    <div>
+      <p class="p-kicker"><span class="p-num">04</span><span class="p-slash">/</span><span>Sheet 04 — 06</span><span class="p-swatch"></span></p>
+      <h2 class="p-client" id="etutor-title">The EtuTor <em>Home</em></h2>
+      <p class="p-meta">Brand artwork <span>·</span> 1 piece</p>
+    </div>
+    <div>
+      <p class="p-desc">Brand artwork for The EtuTor Home — one square, shown at source proportion. A single piece that has to hold the brand on its own.</p>
+      <dl class="p-facts">
+        <div><dt>Discipline</dt><dd>Brand artwork</dd></div>
+        <div><dt>Pieces</dt><dd>1</dd></div>
+        <div><dt>Format</dt><dd>Social square</dd></div>
+      </dl>
+    </div>
+  </div>
+  <div class="feature">
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="The EtuTor Home" data-cap="Brand artwork" aria-label="Open The EtuTor Home brand artwork">
+        <span class="pxbox"><img src="assets/opt/etutor.jpg" width="1080" height="1080" alt="The EtuTor Home brand artwork" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>01</span><span>Brand artwork</span></figcaption>
+    </figure>
+    <aside class="feature-note rv">
+      <p class="mono">One piece</p>
+      <p class="pull">A square that<br>has to carry<br><em>the whole brand.</em></p>
+      <p>Brand artwork from The EtuTor Home archive, shown at its native 1:1 proportion rather than cropped to fit a card.</p>
+      <dl>
+        <div><dt>Client</dt><dd>The EtuTor Home</dd></div>
+        <div><dt>Scope</dt><dd>Brand artwork</dd></div>
+        <div><dt>Pieces</dt><dd>01</dd></div>
+      </dl>
+    </aside>
+  </div>
+  <a class="next-sheet rv" href="#agc">
+    <span class="ns-label">Next sheet — 05 / 06</span>
+    <span class="ns-name">A.G.C. Bose <em>College</em></span>
+    <span class="ns-arrow">↗</span>
+  </a>
+</section>
+
+<!-- ================= 05 A.G.C. BOSE COLLEGE ================= -->
+<section class="project" id="agc" data-num="05" style="--accent:#F2581A" aria-labelledby="agc-title">
+  <div class="p-head wide rv">
+    <div>
+      <p class="p-kicker"><span class="p-num">05</span><span class="p-slash">/</span><span>Sheet 05 — 06</span><span class="p-swatch"></span></p>
+      <h2 class="p-client" id="agc-title">A.G.C. Bose <em>College</em></h2>
+      <p class="p-meta">Event identity <span>·</span> 1 piece</p>
+    </div>
+    <div>
+      <p class="p-desc">An event poster for A.G.C. Bose College — one sheet, shown at full proportion. Built to read from across a corridor.</p>
+      <dl class="p-facts">
+        <div><dt>Discipline</dt><dd>Event identity</dd></div>
+        <div><dt>Pieces</dt><dd>1</dd></div>
+        <div><dt>Format</dt><dd>Event poster</dd></div>
+      </dl>
+    </div>
+  </div>
+  <div class="feature rev">
+    <aside class="feature-note rv">
+      <p class="mono">One sheet</p>
+      <p class="pull">One sheet.<br>One event.<br><em>One clear read.</em></p>
+      <p>Event poster from the A.G.C. Bose College archive. The full sheet is shown at its native portrait proportion.</p>
+      <dl>
+        <div><dt>Client</dt><dd>A.G.C. Bose College</dd></div>
+        <div><dt>Scope</dt><dd>Event poster</dd></div>
+        <div><dt>Pieces</dt><dd>01</dd></div>
+      </dl>
+    </aside>
+    <figure class="shot rv">
+      <button class="shot-open" type="button" data-client="A.G.C. Bose College" data-cap="Event poster" aria-label="Open A.G.C. Bose College event poster">
+        <span class="pxbox"><img src="assets/opt/eventposter.jpg" width="1082" height="1400" alt="A.G.C. Bose College event poster" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>01</span><span>Event poster</span></figcaption>
+    </figure>
+  </div>
+  <a class="next-sheet rv" href="#nis">
+    <span class="ns-label">Next sheet — 06 / 06</span>
+    <span class="ns-name">N!S <em>Graphics</em></span>
+    <span class="ns-arrow">↗</span>
+  </a>
+</section>
+
+<!-- ================= 06 N!S GRAPHICS ================= -->
+<section class="project" id="nis" data-num="06" style="--accent:#ED096B" aria-labelledby="nis-title">
+  <div class="p-head rv">
+    <div>
+      <p class="p-kicker"><span class="p-num">06</span><span class="p-slash">/</span><span>Sheet 06 — 06</span><span class="p-swatch"></span></p>
+      <h2 class="p-client" id="nis-title">N!S <em>Graphics</em></h2>
+      <p class="p-meta">Self-initiated <span>·</span> 4 pieces</p>
+    </div>
+    <div>
+      <p class="p-desc">Self-initiated posters and image experiments from the N!S Graphics archive — where the palette and the tools get tested outside client briefs.</p>
+      <dl class="p-facts">
+        <div><dt>Discipline</dt><dd>Self-initiated</dd></div>
+        <div><dt>Pieces</dt><dd>4</dd></div>
+        <div><dt>Format</dt><dd>Mixed media</dd></div>
+      </dl>
+    </div>
+  </div>
+  <div class="p-grid g-nis">
+    <figure class="shot rv s4">
+      <button class="shot-open" type="button" data-client="N!S Graphics" data-cap="India poster" aria-label="Open N!S Graphics India poster">
+        <span class="pxbox"><img src="assets/opt/nisindia.jpg" width="1000" height="1276" alt="N!S Graphics India poster" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>01</span><span>India poster</span></figcaption>
+    </figure>
+    <figure class="shot rv s8">
+      <button class="shot-open" type="button" data-client="N!S Graphics" data-cap="Animal illustration" aria-label="Open N!S Graphics animal illustration">
+        <span class="pxbox"><img src="assets/opt/animals.jpg" width="1136" height="936" alt="N!S Graphics animal illustration" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>02</span><span>Animal illustration</span></figcaption>
+    </figure>
+    <figure class="shot rv s4">
+      <button class="shot-open" type="button" data-client="N!S Graphics" data-cap="Photo manipulation" aria-label="Open N!S Graphics photo manipulation">
+        <span class="pxbox"><img src="assets/opt/photomanip.jpg" width="720" height="1072" alt="N!S Graphics photo manipulation" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>03</span><span>Photo manipulation</span></figcaption>
+    </figure>
+    <figure class="shot rv s4">
+      <button class="shot-open" type="button" data-client="N!S Graphics" data-cap="Durga Puja greeting" aria-label="Open N!S Graphics Durga Puja greeting">
+        <span class="pxbox"><img src="assets/opt/nispujo.jpg" width="1080" height="1080" alt="N!S Graphics Durga Puja greeting" loading="lazy" decoding="async"></span>
+        <span class="shot-view">View ↗</span>
+      </button>
+      <figcaption><span>04</span><span>Durga Puja greeting</span></figcaption>
+    </figure>
+    <aside class="sheet-note s4 rv">
+      <div>
+        <p class="mono">The test bed</p>
+        <h3>Made for the<br><em>shelf, not a brief.</em></h3>
+      </div>
+      <p>Posters and image experiments made outside client work — a place to test type, colour and new tools without a deadline attached.</p>
+    </aside>
+  </div>
+  <a class="next-sheet rv" href="#studio">
+    <span class="ns-label">Next — 02 / Studio</span>
+    <span class="ns-name">Behind <em>the work.</em></span>
+    <span class="ns-arrow">↗</span>
+  </a>
+</section>
+
+<!-- ================= STUDIO ================= -->
+<section class="studio" id="studio" aria-labelledby="studio-title">
+  <div class="sec-head rv">
+    <p class="sec-kicker"><span class="sec-n">02</span><span class="sec-line"></span><span>Studio</span></p>
+    <h2 id="studio-title">Behind <em>the work.</em></h2>
+    <p class="sec-note">A designer, a desk in South Kolkata, and a practice built on print. The short version — and the receipts.</p>
+  </div>
+  <div class="studio-top">
+    <figure class="portrait rv">
+      <span class="pxbox"><img src="assets/opt/nilotpal_portrait.jpg" width="837" height="978" alt="Portrait of Nilotpal Saha" loading="lazy" decoding="async"></span>
+      <figcaption><span>Nilotpal Saha</span><span>Kolkata, IN</span></figcaption>
+    </figure>
+    <div class="bio rv">
+      <p class="lead">I'm Nilotpal Saha — a senior graphic designer and video editor based in Subhasgram, Kolkata.</p>
+      <p>Since 2019 I've worked inside studios and agencies, moving from ad creatives and brand collateral to leading creative at Image Clinic. My work sits where print craft meets everyday communication: posters, identities, social campaigns and video.</p>
+      <p>I care about type that reads, colour that behaves, and work that looks like it was made by a person — because it was.</p>
+      <ul class="chips">
+        <li style="--c:#79D3DB">Poster design</li>
+        <li style="--c:#35B5BE">Brand identity</li>
+        <li style="--c:#4CC2A2">Social campaigns</li>
+        <li style="--c:#F2581A">Print production</li>
+        <li style="--c:#ED1B24">Digital illustration</li>
+        <li style="--c:#ED096B">Video editing</li>
+        <li style="--c:#851C81">Content planning</li>
+        <li style="--c:#C08A2E">Interior design</li>
+      </ul>
+    </div>
+  </div>
+  <div class="studio-bottom">
+    <div class="exp rv">
+      <h3 class="mini-head">Experience</h3>
+      <div class="job now">
+        <span class="job-yr">2026 — Now</span>
+        <div><b>Image Clinic</b><span class="role">Senior Graphic Designer</span></div>
+        <p>Leading the creative team; client briefs, campaigns, social and video.</p>
+      </div>
+      <div class="job">
+        <span class="job-yr">2023 — 2026</span>
+        <div><b>Pixel Solutionz</b><span class="role">Senior Graphic Designer</span></div>
+        <p>Client briefs, team lead and creative output across print and digital.</p>
+      </div>
+      <div class="job">
+        <span class="job-yr">2022 — 2023</span>
+        <div><b>Hykez</b><span class="role">Mid Graphic Designer</span></div>
+        <p>Web, print, logos and video content for online and offline platforms.</p>
+      </div>
+      <div class="job">
+        <span class="job-yr">2020 — 2022</span>
+        <div><b>Arena Animation</b><span class="role">Junior Graphic Designer</span></div>
+        <p>Ad creatives and brand collateral within existing guidelines.</p>
+      </div>
+      <div class="job">
+        <span class="job-yr">2019 — 2020</span>
+        <div><b>Yogines Studioo</b><span class="role">Freelance Graphic Design</span></div>
+        <p>Social creative and campaign assets; 37% increase in site traffic.</p>
+      </div>
+    </div>
+    <aside class="side rv">
+      <h3 class="mini-head">Education</h3>
+      <div class="edu">
+        <b>Diploma in 3D Animation</b>
+        <span>Arena Animation · 2019 — 2021</span>
+      </div>
+      <div class="edu">
+        <b>Graduation (UG)</b>
+        <span>Calcutta University · 2018 — 2020</span>
+      </div>
+      <h3 class="mini-head">Software</h3>
+      <p class="software"><b>Photoshop</b> · Illustrator · <b>CorelDRAW</b> · After Effects · Premiere Pro · Animate CC · Maya · Figma · Canva</p>
+    </aside>
+  </div>
+</section>
+</main>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="spectrum" aria-hidden="true">
+    <i style="--c:#79D3DB"></i><i style="--c:#35B5BE"></i><i style="--c:#4CC2A2"></i><i style="--c:#F2581A"></i><i style="--c:#ED1B24"></i><i style="--c:#ED096B"></i><i style="--c:#851C81"></i><i style="--c:#C08A2E"></i>
+  </div>
+  <div class="contact-inner">
+    <p class="sec-kicker rv"><span class="sec-n">03</span><span class="sec-line"></span><span>Contact</span></p>
+    <h2 id="contact-title" class="rv">Have something<br><em>worth printing?</em></h2>
+    <a class="mail rv" href="mailto:sahanilotpal005@gmail.com"><span class="mail-txt">sahanilotpal005@gmail.com</span> <span class="mail-arrow">↗</span></a>
+    <div class="contact-grid rv">
+      <div><span class="mono">Phone</span><a href="tel:+917003996685">+91 70039 96685</a></div>
+      <div><span class="mono">Studio</span><p>Subhasgram, Kolkata 700147</p></div>
+    </div>
+    <div class="contact-cta rv">
+      <a class="btn light" href="mailto:sahanilotpal005@gmail.com?subject=Project%20enquiry">Start a conversation <span>↗</span></a>
+      <a class="link-arrow light" href="assets/nilotpal_resume.pdf" download>Download CV <span>↗</span></a>
+    </div>
+  </div>
+  <img class="contact-mark" src="assets/nis-mark.svg" alt="" aria-hidden="true" loading="lazy">
+</section>
+
+<footer>
+  <div class="f-brand"><img src="assets/nis-mark.svg" alt="" width="22" height="19"><span>N!S Graphics — Nilotpal Saha</span></div>
+  <p>© 2026 · Kolkata, India · Set in Didot, Instrument Sans &amp; JetBrains Mono</p>
+  <a href="#top">Back to top ↑</a>
+</footer>
+
+<!-- ================= LIGHTBOX ================= -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Work viewer" aria-hidden="true">
+  <button class="lb-x" type="button">Close ✕</button>
+  <button class="lb-nav lb-prev" type="button" aria-label="Previous piece">←</button>
+  <div class="lb-stage">
+    <img id="lb-img" src="assets/opt/gill76.jpg" alt="">
+    <div class="lb-bar" id="lb-bar"></div>
+    <div class="lb-cap"><span id="lb-client">Gill Travels</span><span id="lb-cap">Campaign poster</span></div>
+  </div>
+  <button class="lb-nav lb-next" type="button" aria-label="Next piece">→</button>
+  <div class="lb-count" id="lb-count">01 / 28</div>
+</div>
+
+<script src="assets/vendor/motion.js"></script>
+<script>
+(() => {
+  'use strict';
+  const doc = document.documentElement;
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const M = window.Motion;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const canAnimate = !!M && !reduce;
+  const EASE = [.2, .75, .25, 1];
+  const OUT = [.76, 0, .24, 1];
+
+  /* ---------- ambient spotlight ---------- */
+  const spot = $('#spotlight');
+  if (spot && canAnimate && matchMedia('(hover:hover)').matches) {
+    let frame = 0, sx = innerWidth * .5, sy = innerHeight * .25;
+    const paint = () => {
+      frame = 0;
+      spot.style.setProperty('--sx', sx + 'px');
+      spot.style.setProperty('--sy', sy + 'px');
+    };
+    addEventListener('pointermove', e => {
+      sx = e.clientX; sy = e.clientY;
+      if (!frame) frame = requestAnimationFrame(paint);
+      spot.classList.add('on');
+    }, { passive: true });
+  }
+
+  /* ---------- text splitting ---------- */
+  const splitChars = el => {
+    const walk = node => {
+      if (node.nodeType === 3) {
+        const text = node.nodeValue;
+        if (!text) return;
+        const frag = document.createDocumentFragment();
+        /* group characters per word so lines only break at spaces */
+        text.split(/(\s+)/).forEach(part => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+          const word = document.createElement('span');
+          word.className = 'chw';
+          for (const ch of part) {
+            const s = document.createElement('span');
+            s.className = 'ch';
+            s.textContent = ch;
+            word.appendChild(s);
+          }
+          frag.appendChild(word);
+        });
+        node.replaceWith(frag);
+      } else if (node.nodeType === 1 && !node.classList.contains('ch')) {
+        [...node.childNodes].forEach(walk);
+      }
+    };
+    [...el.childNodes].forEach(walk);
+    return [...el.querySelectorAll('.ch')];
+  };
+
+  const splitWords = (el, mask = false) => {
+    const walk = node => {
+      if (node.nodeType === 3) {
+        const parts = node.nodeValue.split(/(\s+)/);
+        const frag = document.createDocumentFragment();
+        parts.forEach(part => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+          const w = document.createElement('span');
+          w.className = 'w';
+          const inner = document.createElement('span');
+          inner.className = 'w-in';
+          inner.textContent = part;
+          w.appendChild(inner);
+          frag.appendChild(w);
+        });
+        node.replaceWith(frag);
+      } else if (node.nodeType === 1 && !node.classList.contains('w')) {
+        [...node.childNodes].forEach(walk);
+      }
+    };
+    [...el.childNodes].forEach(walk);
+    if (mask) el.classList.add('w-mask');
+    return [...el.querySelectorAll('.w-in')];
+  };
+
+  const GLYPHS = 'ABCDEFGHJKLMNPQRSTUVWXYZ0123456789/—·';
+  const scramble = (el, text, dur = 380) => {
+    if (!el) return;
+    const t0 = performance.now();
+    const tick = now => {
+      const p = Math.min(1, (now - t0) / dur);
+      const n = Math.floor(p * text.length);
+      let out = text.slice(0, n);
+      for (let i = n; i < text.length; i++) {
+        out += text[i] === ' ' ? ' ' : GLYPHS[(Math.random() * GLYPHS.length) | 0];
+      }
+      el.textContent = out;
+      if (p < 1) requestAnimationFrame(tick);
+      else el.textContent = text;
+    };
+    requestAnimationFrame(tick);
+  };
+
+  /* ---------- intro + hero reveal ---------- */
+  const intro = $('#intro');
+  const heroEls = $$('.hero-el');
+  const heroTitle = $('#hero-title');
+  const heroChars = canAnimate && heroTitle ? splitChars(heroTitle) : [];
+  const cardEls = $$('.card-in');
+  let heroStarted = false;
+
+  if (heroChars.length) {
+    heroChars.forEach(c => {
+      c.style.transform = 'translateY(115%) rotate(6deg)';
+      c.style.opacity = '0';
+    });
+    heroTitle.setAttribute('aria-label', 'Nilotpal Saha.');
+  }
+  if (heroTitle) heroTitle.classList.add('ready');
+
+  function countStats() {
+    $$('.hero-meta b').forEach(el => {
+      const target = parseInt(el.textContent.trim(), 10);
+      if (!Number.isFinite(target) || target > 100) return;
+      const pad = el.textContent.trim().length;
+      const t0 = performance.now();
+      const dur = 1200;
+      const tick = now => {
+        const p = Math.min(1, (now - t0) / dur);
+        const e = 1 - Math.pow(1 - p, 3);
+        el.textContent = String(Math.round(target * e)).padStart(pad, '0');
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }
+
+  function showHero() {
+    if (heroStarted) return;
+    heroStarted = true;
+    if (!canAnimate) {
+      heroEls.forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });
+      cardEls.forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });
+      return;
+    }
+    M.animate(heroChars, { y: ['115%', '0%'], rotate: [6, 0], opacity: [0, 1] }, {
+      duration: .95, ease: OUT, delay: M.stagger(.026, { startDelay: .15 })
+    });
+    M.animate(heroEls, { opacity: [0, 1], y: [26, 0] }, {
+      duration: .9, ease: EASE, delay: M.stagger(.085, { startDelay: .3 })
+    });
+    M.animate(cardEls, { opacity: [0, 1], y: [60, 0] }, {
+      type: 'spring', visualDuration: .9, bounce: .18,
+      delay: M.stagger(.1, { startDelay: .18 })
+    });
+    setTimeout(countStats, 720);
+  }
+
+  let introDone = false;
+  let introTimer = null;
+  const introAnims = [];
+
+  function introKey(e) {
+    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      endIntro(true);
+    }
+  }
+
+  function endIntro(fast) {
+    if (introDone) return;
+    introDone = true;
+    clearTimeout(introTimer);
+    removeEventListener('keydown', introKey);
+    if (!intro) { showHero(); return; }
+    if (!canAnimate) { intro.remove(); showHero(); return; }
+    introAnims.forEach(a => a.stop());
+    const out = M.animate(intro, { y: ['0%', '-101%'] }, {
+      duration: fast ? .55 : .9, ease: OUT
+    });
+    showHero();
+    out.then(() => intro.remove());
+    doc.classList.remove('intro-lock');
+    document.body.classList.add('ready');
+    try { sessionStorage.setItem('nisIntro', '1'); } catch (e) {}
+  }
+
+  const params = new URLSearchParams(location.search);
+  const forceIntro = params.has('intro');
+  const noIntro = params.has('nointro');
+  let seenIntro = false;
+  try { seenIntro = sessionStorage.getItem('nisIntro') === '1'; } catch (e) {}
+
+  if (!intro || !canAnimate || noIntro || (seenIntro && !forceIntro)) {
+    if (intro) intro.remove();
+    showHero();
+  } else {
+    doc.classList.add('intro-lock');
+    const blk = $$('.intro-logo .blk');
+    const ltr = $$('.intro-logo .ltr');
+    const gl = $$('.intro-logo .gl');
+    const meta = $('.intro-meta');
+    const bars = $$('.intro-bar i');
+
+    if (blk.length) introAnims.push(M.animate(blk, {
+      opacity: [0, 1], scale: [.3, 1], rotate: [-8, 0]
+    }, {
+      type: 'spring', visualDuration: .6, bounce: .28,
+      delay: M.stagger(.055, { startDelay: .15 })
+    }));
+    if (ltr.length) introAnims.push(M.animate(ltr, {
+      opacity: [0, 1], y: [22, 0]
+    }, {
+      duration: .7, ease: EASE, delay: M.stagger(.06, { startDelay: .7 })
+    }));
+    if (gl.length) introAnims.push(M.animate(gl, {
+      opacity: [0, 1], y: [8, 0]
+    }, {
+      duration: .55, ease: EASE, delay: M.stagger(.04, { startDelay: 1.15 })
+    }));
+    if (meta) introAnims.push(M.animate(meta, {
+      opacity: [0, 1]
+    }, { duration: .6, ease: 'easeOut', delay: 1.65 }));
+    if (bars.length) introAnims.push(M.animate(bars, {
+      scaleX: [0, 1]
+    }, {
+      duration: .5, ease: EASE, delay: M.stagger(.06, { startDelay: 1.8 })
+    }));
+
+    introTimer = setTimeout(() => endIntro(false), 2850);
+    intro.addEventListener('click', () => endIntro(true));
+    intro.addEventListener('wheel', () => endIntro(true), { passive: true });
+    addEventListener('keydown', introKey);
+  }
+
+  /* ---------- scroll reveals ---------- */
+  const rvAll = $$('.rv');
+  const idxRows = $$('.idx-row');
+
+  if (!canAnimate) {
+    rvAll.forEach(el => el.classList.add('in'));
+    idxRows.forEach(el => el.classList.add('in'));
+  } else {
+    const reveal = (el, delay = 0, y = 26) => {
+      if (el.dataset.revealed) return;
+      el.dataset.revealed = '1';
+      M.animate(el, { opacity: [0, 1], y: [y, 0] }, {
+        duration: .85, ease: EASE, delay
+      }).then(() => el.classList.add('in'));
+    };
+    const revealRow = (el, delay = 0) => reveal(el, delay, 18);
+
+    const generic = rvAll.filter(el => !el.closest('.p-grid, .feature'));
+    generic.forEach(el => {
+      M.inView(el, () => reveal(el), { amount: .12, margin: '0px 0px -8% 0px' });
+    });
+
+    $$('.p-grid').forEach(grid => {
+      const els = $$('.rv', grid);
+      const cols = () => Math.max(1, getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length);
+      els.forEach((el, i) => {
+        const d = Math.min(i % cols(), 3) * .07;
+        const box = $('.pxbox', el);
+        const img = box ? $('img', box) : null;
+        const cap = $('figcaption', el);
+        M.inView(el, () => {
+          if (el.dataset.revealed) return;
+          el.dataset.revealed = '1';
+          M.animate(el, { opacity: [0, 1] }, {
+            duration: .5, ease: 'easeOut', delay: d
+          }).then(() => el.classList.add('in'));
+          if (box) {
+            box.style.clipPath = 'inset(0 0 100% 0)';
+            M.animate(box, {
+              clipPath: ['inset(0 0 100% 0)', 'inset(0 0 0% 0)']
+            }, { duration: .95, ease: OUT, delay: d + .05 })
+              .then(() => { box.style.clipPath = 'none'; });
+          }
+          if (cap) {
+            /* captions wait for the image wipe so no empty labels float alone */
+            cap.style.opacity = '0';
+            M.animate(cap, { opacity: [0, 1] }, {
+              duration: .5, ease: 'easeOut', delay: d + .6
+            }).then(() => { cap.style.opacity = ''; });
+          }
+          if (img) {
+            M.animate(img, { scale: [1.05, 1] }, {
+              duration: 1.2, ease: OUT, delay: d + .05
+            });
+          }
+        }, { amount: .08, margin: '0px 0px -6% 0px' });
+      });
+    });
+
+    $$('.feature').forEach(feature => {
+      const els = $$('.rv', feature);
+      M.inView(feature, () => els.forEach((el, i) => reveal(el, i * .1)), {
+        amount: .12, margin: '0px 0px -8% 0px'
+      });
+    });
+
+    const idx = $('.idx');
+    if (idx) {
+      M.inView(idx, () => idxRows.forEach((row, i) => revealRow(row, i * .055)), {
+        amount: .1, margin: '0px 0px -8% 0px'
+      });
+    }
+
+    /* word-level reveals */
+    const headingTargets = $$('.sec-head h2, .p-client, .contact h2, .feature-note .pull, .sheet-note h3, .bio .lead, .bio p:last-of-type, .mini-head');
+    headingTargets.forEach(el => {
+      const words = splitWords(el, true);
+      M.inView(el, () => {
+        M.animate(words, { y: ['115%', '0%'] }, {
+          duration: .9, ease: OUT, delay: M.stagger(.05)
+        });
+      }, { amount: .25, margin: '0px 0px -8% 0px' });
+    });
+
+    const paraTargets = $$('.sec-note, .p-desc, .bio p:not(.lead):not(:last-of-type), .feature-note>p, .sheet-note p');
+    paraTargets.forEach(el => {
+      const words = splitWords(el, false);
+      M.inView(el, () => {
+        M.animate(words, { opacity: [0, 1], y: [14, 0] }, {
+          duration: .6, ease: EASE, delay: M.stagger(.012)
+        });
+      }, { amount: .2, margin: '0px 0px -6% 0px' });
+    });
+
+    /* index name hover wave */
+    if (matchMedia('(hover:hover)').matches) {
+      $$('.idx-client').forEach(el => {
+        const chars = splitChars(el);
+        const row = el.closest('.idx-row');
+        if (!row) return;
+        let wave = null;
+        row.addEventListener('pointerenter', () => {
+          if (wave) wave.stop();
+          wave = M.animate(chars, { y: [0, -6, 0] }, {
+            duration: .42, ease: EASE, delay: M.stagger(.016)
+          });
+        });
+      });
+    }
+
+    /* contact mail hover wave */
+    const mail = $('.mail');
+    const mailTxt = mail ? $('.mail-txt', mail) : null;
+    if (mail && mailTxt && matchMedia('(hover:hover)').matches) {
+      const chars = splitChars(mailTxt);
+      let wave = null;
+      mail.addEventListener('pointerenter', () => {
+        if (wave) wave.stop();
+        wave = M.animate(chars, { y: [0, -7, 0] }, {
+          duration: .5, ease: EASE, delay: M.stagger(.017)
+        });
+      });
+    }
+
+    /* small type groups */
+    const groupSets = [
+      ['.p-facts', 'div'],
+      ['.chips', 'li'],
+      ['.exp', '.job'],
+      ['.side', '.edu'],
+      ['.sheet-note', 'li'],
+      ['.contact-grid', 'div']
+    ];
+    groupSets.forEach(([parentSel, childSel]) => {
+      $$(parentSel).forEach(parent => {
+        const items = $$(childSel, parent);
+        if (!items.length) return;
+        items.forEach(it => { it.style.opacity = '0'; });
+        M.inView(parent, () => {
+          M.animate(items, { opacity: [0, 1], y: [14, 0] }, {
+            duration: .6, ease: EASE, delay: M.stagger(.05)
+          });
+        }, { amount: .2, margin: '0px 0px -6% 0px' });
+      });
+    });
+
+    /* scroll-filled statement */
+    const stmt = $('.statement-line');
+    if (stmt) {
+      const words = splitWords(stmt, false);
+      words.forEach(w => { w.style.opacity = '.26'; });
+      M.scroll(progress => {
+        const n = progress * words.length;
+        words.forEach((w, i) => { w.style.opacity = i < n ? '1' : '.26'; });
+      }, { target: stmt, offset: ['start .95', 'end .62'] });
+    }
+  }
+
+  /* ---------- progress bar + header + scroll spy ---------- */
+  const bar = $('#progress');
+  const header = $('#topbar');
+  const contactSec = $('#contact');
+  const navLinks = $$('.nav a');
+  const spy = navLinks.map(a => ({ a, el: $(a.getAttribute('href')) })).filter(x => x.el);
+
+  function syncChrome(y) {
+    if (header) {
+      header.classList.toggle('scrolled', y > 30);
+      if (contactSec) {
+        const r = contactSec.getBoundingClientRect();
+        header.classList.toggle('on-dark', r.top <= 76 && r.bottom > 76);
+      }
+    }
+    const probe = y + innerHeight * .35;
+    let current = null;
+    spy.forEach(({ a, el }) => {
+      if (el.getBoundingClientRect().top + y <= probe) current = a;
+    });
+    navLinks.forEach(a => a.classList.toggle('on', a === current));
+  }
+
+  function fallbackProgress() {
+    if (!bar) return;
+    const max = doc.scrollHeight - innerHeight;
+    bar.style.transform = `scaleX(${max > 0 ? Math.min(1, scrollY / max) : 0})`;
+  }
+
+  if (canAnimate) {
+    if (bar) M.scroll(M.animate(bar, { scaleX: [0, 1] }, { ease: 'linear' }), { trackContentSize: true });
+    M.scroll((progress, info) => {
+      syncChrome(info && info.y ? info.y.current : scrollY);
+    }, { trackContentSize: true });
+    syncChrome(scrollY);
+  } else {
+    const onScroll = () => { fallbackProgress(); syncChrome(scrollY); };
+    addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* ---------- hero rack: pointer spring + scroll drift ---------- */
+  const rack = $('.rack');
+  const hero = $('.hero');
+  if (rack && canAnimate) {
+    const cards = $$('.card', rack);
+    const mx = M.motionValue(0);
+    const my = M.motionValue(0);
+    const sx = M.springValue(mx, { stiffness: 90, damping: 18, mass: .7 });
+    const sy = M.springValue(my, { stiffness: 90, damping: 18, mass: .7 });
+
+    cards.forEach(card => {
+      const cs = getComputedStyle(card);
+      const depth = parseFloat(cs.getPropertyValue('--depth')) || 10;
+      const rot = parseFloat(cs.getPropertyValue('--rot')) || 0;
+      const x = M.transformValue(() => sx.get() * depth);
+      const y = M.transformValue(() => sy.get() * depth);
+      M.styleEffect(card, { x, y, rotate: M.motionValue(rot) });
+    });
+
+    rack.addEventListener('pointermove', e => {
+      const r = rack.getBoundingClientRect();
+      mx.set(((e.clientX - r.left) / r.width - .5) * 2);
+      my.set(((e.clientY - r.top) / r.height - .5) * 2);
+    }, { passive: true });
+    rack.addEventListener('pointerleave', () => { mx.set(0); my.set(0); });
+
+    if (hero) {
+      M.scroll(M.animate(rack, { y: [26, -26] }, { ease: 'linear' }), {
+        target: hero, offset: ['start start', 'end start']
+      });
+    }
+  }
+
+  /* ---------- marquee ---------- */
+  const marquee = $('.marquee');
+  const track = $('.marquee-track');
+  if (track && canAnimate) {
+    const anim = M.animate(track, { x: ['0%', '-50%'] }, {
+      duration: 52, ease: 'linear', repeat: Infinity
+    });
+    if (marquee) {
+      marquee.addEventListener('pointerenter', () => anim.pause());
+      marquee.addEventListener('pointerleave', () => anim.play());
+    }
+    let lastY = scrollY, reset = 0;
+    addEventListener('scroll', () => {
+      const v = Math.abs(scrollY - lastY);
+      lastY = scrollY;
+      anim.speed = Math.min(3.2, 1 + v * .012);
+      clearTimeout(reset);
+      reset = setTimeout(() => { anim.speed = 1; }, 140);
+    }, { passive: true });
+  }
+
+  /* ---------- magnetic buttons ---------- */
+  if (canAnimate) {
+    $$('.btn, .link-arrow').forEach(el => {
+      const mx = M.motionValue(0);
+      const my = M.motionValue(0);
+      const sx = M.springValue(mx, { stiffness: 300, damping: 22, mass: .4 });
+      const sy = M.springValue(my, { stiffness: 300, damping: 22, mass: .4 });
+      M.styleEffect(el, { x: sx, y: sy });
+      el.addEventListener('pointermove', e => {
+        const r = el.getBoundingClientRect();
+        mx.set(((e.clientX - r.left) / r.width - .5) * 8);
+        my.set(((e.clientY - r.top) / r.height - .5) * 8);
+      }, { passive: true });
+      el.addEventListener('pointerleave', () => { mx.set(0); my.set(0); });
+    });
+  }
+
+  /* ---------- image hover ---------- */
+  if (canAnimate) {
+    M.hover('.shot-open', btn => {
+      const img = $('img', btn);
+      const view = $('.shot-view', btn);
+      if (img) M.animate(img, { scale: 1.024 }, { type: 'spring', stiffness: 220, damping: 26, mass: .5 });
+      if (view) M.animate(view, { opacity: 1, y: 0 }, { duration: .22, ease: EASE });
+      return () => {
+        if (img) M.animate(img, { scale: 1 }, { type: 'spring', stiffness: 220, damping: 26, mass: .5 });
+        if (view && document.activeElement !== btn) {
+          M.animate(view, { opacity: 0, y: -6 }, { duration: .18, ease: 'easeOut' });
+        }
+      };
+    });
+
+
+    $$('.shot-open').forEach(btn => {
+      const view = $('.shot-view', btn);
+      if (!view) return;
+      btn.addEventListener('focus', () => {
+        M.animate(view, { opacity: 1, y: 0 }, { duration: .2, ease: EASE });
+      });
+      btn.addEventListener('blur', () => {
+        if (!btn.matches(':hover')) M.animate(view, { opacity: 0, y: -6 }, { duration: .18, ease: 'easeOut' });
+      });
+    });
+  }
+
+  /* ---------- work index preview ---------- */
+  const preview = $('#idx-preview');
+  const pvImg = $('#pv-img');
+  const pvCap = $('#pv-cap');
+  const pvIn = preview ? $('.pv-in', preview) : null;
+  const rows = $$('.idx-row');
+
+  if (preview && pvIn && rows.length) {
+    if (canAnimate) {
+      const px = M.motionValue(0);
+      const py = M.motionValue(0);
+      const sx = M.springValue(px, { stiffness: 380, damping: 34, mass: .55 });
+      const sy = M.springValue(py, { stiffness: 380, damping: 34, mass: .55 });
+      M.styleEffect(preview, { x: sx, y: sy });
+
+      const PW = 250, PH = 330;
+      let init = false;
+      let showAnim = null;
+      let hideAnim = null;
+      let pvAnim = null;
+
+      const idxHeadEl = $('.idx-head');
+
+      const point = e => {
+        const gap = 26;
+        let x = e.clientX + gap;
+        if (x + PW > innerWidth - 14) x = e.clientX - PW - gap;
+        x = Math.max(14, Math.min(innerWidth - PW - 14, x));
+        /* never let the card drift over the section head or its note */
+        const head = idxHeadEl ? idxHeadEl.getBoundingClientRect().bottom + 12 : 88;
+        let y = Math.max(88, head, e.clientY - PH * .52);
+        y = Math.min(y, innerHeight - PH - 14);
+        return { x, y };
+      };
+      const move = e => {
+        const p = point(e);
+        px.set(p.x); py.set(p.y);
+      };
+
+      rows.forEach(row => {
+        row.addEventListener('pointerenter', e => {
+          if (!init) {
+            const p = point(e);
+            px.set(p.x); py.set(p.y);
+            init = true;
+          } else {
+            move(e);
+          }
+          const next = row.dataset.preview;
+          const cap = row.dataset.cap || 'Selected work';
+          if (next && pvImg && pvImg.getAttribute('src') !== next) {
+            pvImg.src = next;
+            M.animate(pvImg, { opacity: [.35, 1] }, { duration: .4, ease: EASE });
+          }
+          if (pvCap) scramble(pvCap, cap);
+          preview.classList.add('on');
+          if (showAnim) showAnim.stop();
+          if (hideAnim) hideAnim.stop();
+          if (pvAnim) pvAnim.stop();
+          showAnim = M.animate(preview, { opacity: 1 }, { duration: .18, ease: 'easeOut' });
+          pvAnim = M.animate(pvIn, {
+            opacity: [0, 1], scale: [.92, 1], rotate: [-3, 0]
+          }, { type: 'spring', visualDuration: .5, bounce: .2 });
+        });
+        row.addEventListener('pointerleave', () => {
+          preview.classList.remove('on');
+          if (showAnim) showAnim.stop();
+          if (hideAnim) hideAnim.stop();
+          hideAnim = M.animate(preview, { opacity: 0 }, { duration: .15, ease: 'easeOut' });
+          if (pvAnim) pvAnim.stop();
+          pvAnim = M.animate(pvIn, { scale: .92, rotate: -3 }, { duration: .2, ease: EASE });
+        });
+        row.addEventListener('pointermove', move);
+      });
+    } else {
+      const PW = 300, PH = 400;
+      rows.forEach(row => {
+        row.addEventListener('pointerenter', e => {
+          const x = Math.max(14, Math.min(innerWidth - PW - 14, e.clientX + 30));
+          const y = Math.max(88, Math.min(innerHeight - PH - 14, e.clientY - PH * .56));
+          preview.style.transform = `translate3d(${x}px,${y}px,0)`;
+          preview.style.opacity = '1';
+          const next = row.dataset.preview;
+          if (next && pvImg) pvImg.src = next;
+          if (pvCap) pvCap.textContent = row.dataset.cap || 'Selected work';
+        });
+        row.addEventListener('pointerleave', () => { preview.style.opacity = '0'; });
+      });
+    }
+  }
+
+  /* ---------- lightbox ---------- */
+  const lb = $('#lightbox');
+  const lbImg = $('#lb-img');
+  const lbClient = $('#lb-client');
+  const lbCap = $('#lb-cap');
+  const lbCount = $('#lb-count');
+  const lbBar = $('#lb-bar');
+  const lbStage = lb ? $('.lb-stage', lb) : null;
+  const shots = $$('.shot-open');
+  let lbIndex = 0;
+  let lastFocus = null;
+
+  function showLB(i) {
+    if (!lb || !shots.length) return;
+    lbIndex = (i + shots.length) % shots.length;
+    const btn = shots[lbIndex];
+    const img = $('img', btn);
+    if (!img) return;
+    lbImg.src = img.currentSrc || img.src;
+    lbImg.alt = img.alt || '';
+    lbClient.textContent = btn.dataset.client || '';
+    lbCap.textContent = btn.dataset.cap || '';
+    lbCount.textContent = String(lbIndex + 1).padStart(2, '0') + ' / ' + String(shots.length).padStart(2, '0');
+    const section = btn.closest('.project');
+    const accent = section ? getComputedStyle(section).getPropertyValue('--accent').trim() : '';
+    lbBar.style.background = accent || '#F2581A';
+    if (canAnimate) {
+      M.animate(lbImg, { opacity: [0, 1], scale: [.985, 1] }, { duration: .35, ease: EASE });
+      M.animate(lbBar, { scaleX: [0, 1] }, { duration: .5, ease: EASE });
+    }
+  }
+
+  function openLB(i) {
+    if (!lb) return;
+    lastFocus = document.activeElement;
+    showLB(i);
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    lb.style.pointerEvents = 'auto';
+    doc.classList.add('intro-lock');
+    if (canAnimate) {
+      M.animate(lb, { opacity: 1 }, { duration: .28, ease: 'easeOut' });
+      if (lbStage) M.animate(lbStage, {
+        opacity: [0, 1], scale: [.97, 1]
+      }, { type: 'spring', visualDuration: .45, bounce: .15 });
+    } else {
+      lb.style.opacity = '1';
+      if (lbStage) { lbStage.style.opacity = '1'; lbStage.style.transform = 'none'; }
+    }
+    const x = $('.lb-x', lb);
+    if (x) x.focus();
+  }
+
+  function closeLB() {
+    if (!lb) return;
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    doc.classList.remove('intro-lock');
+    if (canAnimate) {
+      M.animate(lb, { opacity: 0 }, { duration: .22, ease: 'easeIn' }).then(() => {
+        if (!lb.classList.contains('open')) lb.style.pointerEvents = 'none';
+      });
+      if (lbStage) M.animate(lbStage, { opacity: 0, scale: .97 }, { duration: .2, ease: 'easeIn' });
+    } else {
+      lb.style.opacity = '0';
+      lb.style.pointerEvents = 'none';
+      if (lbStage) lbStage.style.opacity = '0';
+    }
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  shots.forEach((btn, i) => btn.addEventListener('click', () => openLB(i)));
+  if (lb) {
+    $('.lb-x', lb).addEventListener('click', closeLB);
+    $('.lb-prev', lb).addEventListener('click', e => { e.stopPropagation(); showLB(lbIndex - 1); });
+    $('.lb-next', lb).addEventListener('click', e => { e.stopPropagation(); showLB(lbIndex + 1); });
+    lb.addEventListener('click', e => { if (e.target === lb) closeLB(); });
+    addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLB();
+      if (e.key === 'ArrowLeft') showLB(lbIndex - 1);
+      if (e.key === 'ArrowRight') showLB(lbIndex + 1);
+      if (e.key === 'Tab') {
+        const focusables = $$('button', lb);
+        if (!focusables.length) return;
+        const first = focusables[0], last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+  }
+
+  /* ---------- contact mark drift ---------- */
+  const mark = $('.contact-mark');
+  const contact = $('#contact');
+  if (mark && contact && canAnimate) {
+    M.scroll(M.animate(mark, { y: [24, -24], rotate: [-2, 2] }, { ease: 'linear' }), {
+      target: contact, offset: ['start end', 'end start']
+    });
+  }
+})();
+</script>
+</body>
+</html>
