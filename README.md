@@ -10,3 +10,4 @@ Live URL: [https://nis-graphics-frame.vercel.app](https://nis-graphics-frame.ver
 - **Rooftop Experience (`/rooftop`)**: Dynamic celestial sky engine matching live Kolkata time (Dawn, Morning, Day, Dusk, Night) with interactive time scrubber.
 - **Optimized Assets**: Modern web-optimized WebP/JPEG assets, SVG vectors, and self-hosted high-legibility webfonts.
 - **Edge Performance**: Pre-configured `vercel.json` with immutable CDN caching headers and security policies.
+
